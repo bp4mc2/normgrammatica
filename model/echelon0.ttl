@@ -1,0 +1,249 @@
+#
+# Shape graph for the textual echelon, the top echelon, hierarchical level 0
+#
+
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh:   <http://www.w3.org/ns/shacl#>
+PREFIX xs:   <http://www.w3.org/2001/XMLSchema>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+PREFIX echelon0: <http://bp4mc2.org/def/echelon0#>
+
+#
+# Text: eli:Expression
+#
+echelon0:Expression a sh:NodeShape;
+  sh:targetClass eli:Expression;
+  rdfs:label "Expression"@en;
+  rdfs:label "Tekstfragment"@nl;
+  sh:name "eli:Expression";
+  sh:property echelon0:Expression.title;
+  sh:property echelon0:Expression.cites;
+  sh:property echelon0:Expression.position;
+  sh:property echelon0:Expression.realizes;
+  sh:property echelon0:Expression.number;
+  sh:property echelon0:Expression.chars;
+.
+echelon0:Expression.title a sh:PropertyShape;
+  sh:path dct:title;
+  sh:name "dct:title";
+  rdfs:label "titel"@nl;
+  rdfs:label "title"@en;
+  sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:nodeKind sh:Literal;
+.
+echelon0:Expression.cites a sh:PropertyShape;
+  sh:path eli:cites;
+  sh:name "eli:cites";
+  rdfs:label "citeert"@nl;
+  rdfs:label "cites"@en;
+  sh:class eli:Expression;
+.
+echelon0:Expression.position a sh:PropertyShape;
+  sh:path schema:position;
+  sh:name "schema:position";
+  rdfs:label "positie"@nl;
+  rdfs:label "position"@en;
+  sh:datatype xsd:integer;
+  sh:maxCount 1;
+  sh:nodeKind sh:Literal;
+  rdfs:comment "The usage of schema:position is somewhat of a hack. It is needed to maintain the sequence of expressions in the original document. Other options, like rdf:first/rdf:next or co:firstItem/co:nextItem seem overkill."@en;
+.
+echelon0:Expression.realizes a sh:PropertyShape;
+  sh:path eli:realizes;
+  sh:name "eli:realizes";
+  rdfs:label "realiseert"@nl;
+  rdfs:label "realizes"@en;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:class eli:Work;
+  rdfs:comment "As eli:WorkSubdivision is a subclass of eli:Work, an expression might also realize a worksubdisivion";
+.
+echelon0:Expression.number a sh:PropertyShape;
+  sh:path eli:number;
+  sh:name "eli:number";
+  rdfs:label "nummer"@nl;
+  rdfs:label "number"@en;
+  sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:nodeKind sh:Literal;
+.
+echelon0:Expression.chars a sh:PropertyShape;
+  sh:path cnt:chars;
+  sh:name "cnt:chars";
+  rdfs:label "tekst"@nl;
+  rdfs:label "text"@en;
+  sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:nodeKind sh:Literal;
+  rdfs:comment "Datatype should probably be rdf:langString, as this property can only contain text as characters"@en;
+.
+
+eli:WorkSubdivision a sh:NodeShape;
+  sh:targetClass eli:WorkSubdivision;
+  sh:name "eli:WorkSubdivision";
+  rdfs:label "Onderdeel"@nl;
+  rdfs:label "Work subdivision"@en;
+  sh:property eli:WorkSubdivision.is_part_of;
+.
+eli:WorkSubdivision.is_part_of a sh:PropertyShape;
+  sh:path eli:is_part_of;
+  sh:name "eli:is_part_of";
+  rdfs:label "onderdeel van"@nl;
+  rdfs:label "is part of"@en;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:class eli:Work;
+.
+
+eli:Work a sh:NodeShape;
+  sh:targetClass eli:Work;
+  sh:name "eli:Work";
+  rdfs:label "Werk"@nl;
+  rdfs:label "Work"@en;
+.
+
+#
+# Annotation: Web Annotation Standard
+#
+echelon0:Annotation a sh:NodeShape;
+  sh:targetClass oa:Annotation;
+  sh:name "oa:Annotation";
+  rdfs:label "Annotatie"@nl;
+  rdfs:label "Annotation"@en;
+  sh:property echelon0:Annotation.body;
+  sh:property echelon0:Annotation.target;
+  sh:property echelon0:Annotation.motivation;
+.
+echelon0:Annotation.motivation a sh:PropertyShape;
+  sh:path oa:motivation;
+  sh:name "oa:motivation";
+  rdfs:label "motivatie"@nl;
+  rdfs:label "motivation"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:hasValue oa:classifying;
+.
+oa:classifying sh:name "classifying".
+echelon0:Annotation.body a sh:PropertyShape;
+  sh:path oa:body;
+  sh:name "oa:body";
+  rdfs:label "betreft"@nl;
+  rdfs:label "about"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node echelon0:Annotation.Body;
+.
+echelon0:Annotation.Body a sh:NodeShape;
+  sh:name "skos:Concept";
+  rdfs:label "Juridisch grammaticale functie"@nl;
+  rdfs:label "Legal grammar function"@en;
+  sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue echelon0:LegalGrammarFunctions;
+  ]
+.
+echelon0:LegalGrammarFunctions a skos:ConceptScheme;
+  rdfs:label "Juridisch grammaticale functies"@nl;
+  rdfs:label "Legal Grammar Functions"@en;
+.
+echelon0:PrimarySubject a skos:Concept;
+  rdfs:label "Primary subject"@en;
+  rdfs:label "Primair subject"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:SecondaryySubject a skos:Concept;
+  rdfs:label "Secondary subject"@en;
+  rdfs:label "Secundair subject"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:NormExpression a skos:Concept;
+  rdfs:label "Norm expression"@en;
+  rdfs:label "Normuitdrukking"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:Object a skos:Concept;
+  rdfs:label "Object"@en;
+  rdfs:label "Object"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:Condition a skos:Concept;
+  rdfs:label "Condition"@en;
+  rdfs:label "Conditie"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:LegalEffect a skos:Concept;
+  rdfs:label "Legal effect"@en;
+  rdfs:label "Juridisch effect"@nl;
+  skos:inScheme echelon0:LegalGrammarFunctions;
+.
+echelon0:Annotation.target a sh:PropertyShape;
+  sh:path oa:target;
+  sh:name "oa:target";
+  rdfs:label "betreft"@nl;
+  rdfs:label "targets"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node echelon0:Annotation.Target;
+  sh:nodeKind sh:BlankNode;
+.
+echelon0:Annotation.Target a sh:NodeShape;
+  sh:name "Target";
+  rdfs:label "Doel"@nl;
+  rdfs:label "Target"@en;
+  sh:property echelon0:Annotation.Target.source;
+  sh:property echelon0:Annotation.Target.selector;
+.
+echelon0:Annotation.Target.source a sh:PropertyShape;
+  sh:path oa:source;
+  sh:name "oa:source";
+  rdfs:label "bron"@nl;
+  rdfs:label "source"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:class eli:Expression;
+.
+echelon0:Annotation.Target.selector a sh:PropertyShape;
+  sh:path oa:selector;
+  sh:name "oa:selector";
+  rdfs:label "selectie"@nl;
+  rdfs:label "selector"@en;
+  sh:minCount 1;
+  sh:class oa:TextPositionSelector;
+.
+
+echelon0:TextPositionSelector a sh:NodeShape;
+  sh:targetClass oa:TextPositionSelector;
+  sh:name "oa:TextPositionSelector";
+  rdfs:label "Text position selector";
+  rdfs:label "Positie-selectie"@nl;
+  sh:property echelon0:TextPositionSelector.start;
+  sh:property echelon0:TextPositionSelector.end;
+.
+echelon0:TextPositionSelector.start a sh:PropertyShape;
+  sh:path oa:start;
+  sh:name "oa:start";
+  rdfs:label "start"@nl;
+  rdfs:label "start"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:integer;
+.
+echelon0:TextPositionSelector.end a sh:PropertyShape;
+  sh:path oa:end;
+  sh:name "oa:end";
+  rdfs:label "end"@nl;
+  rdfs:label "end"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:integer;
+.

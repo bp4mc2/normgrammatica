@@ -1,0 +1,30 @@
+title: Leave only rdfs:label ""@nl
+version: 1.0
+prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  sh: http://www.w3.org/ns/shacl#
+  owl: http://www.w3.org/2002/07/owl#
+  xsd: http://www.w3.org/2001/XMLSchema#
+queries:
+  - title: copy all from input to output
+    query: >
+      insert { graph <urn:output> {?s?p?o} }
+      where { graph <urn:input> {?s?p?o} }
+  - title: remove rdfs:label without @en language label
+    query: >
+      prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      prefix sh: <http://www.w3.org/ns/shacl#>
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      delete {
+        graph <urn:output> {
+          ?s rdfs:label ?l.
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?s rdfs:label ?l
+          FILTER (LANG(?l)!='en')
+        }
+      }
