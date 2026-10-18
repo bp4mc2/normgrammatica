@@ -32,3 +32,6 @@ java -jar libs/rdf2rdf.jar -i pipeline/total.ttl -o pipeline/total-en.ttl -c scr
 # Create diagrams
 java -jar libs/rdf2xml.jar pipeline/total-en.ttl media/echelon0.graphml libs/rdf2graphml.xsl add media/echelon0-edited.graphml
 java -jar libs/rdf2xml.jar pipeline/total-nl.ttl media/echelon0-nl.graphml libs/rdf2graphml.xsl add media/echelon0-edited.graphml
+
+# Flush pipeline
+rm -f pipeline/*.*
