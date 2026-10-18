@@ -1,0 +1,67 @@
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+
+PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/>
+
+#
+# Norm uit Artikel 36 lid 1 Pw
+#
+annotatie:Artikel36lid1Pw.Condition1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 246]
+  ];
+  oa:body lg:Condition
+.
+annotatie:Artikel36lid1Pw.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 249; oa:end 251], [oa:start 342; oa:end 349]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel36lid1Pw.PrimarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 253; oa:end 263]
+  ];
+  oa:body lg:PrimarySubject
+.
+annotatie:Artikel36lid1Pw.Condition2 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 266; oa:end 307]
+  ];
+  oa:body lg:Condition
+.
+annotatie:Artikel36lid1Pw.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 310; oa:end 340]
+  ];
+  oa:body lg:Object
+.
+
+#
+# Begrip "Pensioengerechtigde leeftijd"
+#
+annotatie:Artikel1submPw.Term a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=m&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 29]
+  ];
+  oa:body lg:Term
+.
+annotatie:Artikel1submPw.Definition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=m&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 32; oa:end 124]
+  ];
+  oa:body lg:Definition
+.

@@ -1,0 +1,223 @@
+#
+# Shape graph for the textual echelon, the top echelon, hierarchical level 0
+#
+
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh:   <http://www.w3.org/ns/shacl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lomo: <http://data.europa.eu/leg/lomo#>
+
+PREFIX echelon0: <http://bp4mc2.org/def/echelon1#>
+PREFIX echelon1: <http://bp4mc2.org/def/echelon1#>
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+
+#
+# Imported
+#
+echelon0:Expression a sh:NodeShape;
+  sh:targetClass eli:Expression;
+  rdfs:label "Expression"@en;
+  rdfs:label "Tekstfragment"@nl;
+  sh:name "eli:Expression";
+.
+
+#
+# Superclasses
+#
+echelon1:LegalRule a sh:NodeShape;
+  sh:targetClass lomo:LegalRule;
+  sh:name "lomo:LegalRule";
+  rdfs:label "Juridische regel"@nl;
+  rdfs:label "Legal rule"@en;
+  sh:property echelon1:LegalRule.establishedIn;
+.
+echelon1:LegalRule.establishedIn a sh:PropertyShape;
+  sh:path lomo:establishedIn;
+  sh:name "lomo:establishedIn";
+  rdfs:label "bepaald in"@nl;
+  rdfs:label "established in"@en;
+  sh:class eli:Expression; #Vermoedelijk eigenlijk eli:LegalExpression, maar die er maar even tussenuit...
+.
+
+echelon1:ConstitutiveRule a sh:NodeShape;
+  sh:targetClass lomo:ConstitutiveRule;
+  sh:name "lomo:ConstitutiveRule";
+  rdfs:label "Constitutieve regel"@nl;
+  rdfs:label "Constitutive rule"@en;
+.
+
+#
+# Norm
+#
+echelon1:PrescriptiveRule a sh:NodeShape;
+  sh:targetClass lomo:PrescriptiveRule;
+  sh:name "lomo:PrescriptiveRule";
+  rdfs:label "Norm"@nl;
+  rdfs:label "Prescriptive rule"@en;
+  sh:property echelon1:PrescriptiveRule.primarySubject;
+  sh:property echelon1:PrescriptiveRule.secondarySubject;
+  sh:property echelon1:PrescriptiveRule.object;
+  sh:property echelon1:PrescriptiveRule.produces;
+  sh:property echelon1:PrescriptiveRule.legalEffect;
+  sh:property echelon1:PrescriptiveRule.condition;
+.
+echelon1:PrescriptiveRule.primarySubject a sh:PropertyShape;
+  sh:path lg:primarySubject;
+  sh:name "lg:primarySubject";
+  rdfs:label "primair subject"@nl;
+  rdfs:label "primary subject"@en;
+  sh:class skos:Concept;
+.
+echelon1:PrescriptiveRule.secondarySubject a sh:PropertyShape;
+  sh:path lg:secondarySubject;
+  sh:name "lg:secondarySubject";
+  rdfs:label "secundair subject"@nl;
+  rdfs:label "secondary subject"@en;
+  sh:class skos:Concept;
+.
+echelon1:PrescriptiveRule.object a sh:PropertyShape;
+  sh:path lg:object;
+  sh:name "lg:object";
+  rdfs:label "object"@nl;
+  rdfs:label "object"@en;
+  sh:class skos:Concept;
+.
+echelon1:PrescriptiveRule.produces a sh:PropertyShape;
+  sh:path lomo:produces;
+  sh:name "lomo:produces";
+  rdfs:label "normeert"@nl;
+  rdfs:label "produces"@en;
+  sh:class lomo:Action;
+.
+echelon1:PrescriptiveRule.condition a sh:PropertyShape;
+  sh:path lg:condition;
+  sh:name "lg:condition";
+  rdfs:label "conditie"@nl;
+  rdfs:label "condition"@en;
+  sh:class lg:Condition;
+.
+
+#
+# Conditie (dit is echt iets nieuws)
+#
+lg:Condition a owl:Class.
+lg:CompoundCondition a owl:Class; rdfs:subClassOf lg:Condition.
+lg:ElementaryCondition a owl:Class; rdfs:subClassOf lg:Condition.
+
+echelon1:Condition a sh:NodeShape;
+  sh:targetClass lg:Condition;
+  sh:name "lg:Condition";
+  rdfs:label "Condition"@en;
+  rdfs:label "Conditie"@nl;
+.
+
+echelon1:CompoundCondition a sh:NodeShape;
+  sh:targetClass lg:CompoundCondition;
+  sh:name "lg:CompoundCondition";
+  rdfs:label "Compound condition"@en;
+  rdfs:label "Samengestelde conditie"@nl;
+  sh:property echelon1:CompoundCondition.operator;
+  sh:property echelon1:CompoundCondition.conditionList;
+.
+echelon1:CompoundCondition.operator a sh:PropertyShape;
+  sh:path lg:operator;
+  sh:name "lg:operator";
+  rdfs:label "operator"@en;
+  rdfs:label "operator"@nl;
+.
+echelon1:CompoundCondition.conditionList a sh:PropertyShape;
+  sh:path lg:conditionList;
+  sh:name "lg:conditionList";
+  rdfs:label "condition list"@en;
+  rdfs:label "conditielijst"@nl;
+  sh:class rdf:List;
+.
+
+echelon1:ElementaryCondition a sh:NodeShape;
+  sh:targetClass lg:ElementaryCondition;
+  sh:name "lg:ElementaryCondition";
+  rdfs:label "Elementary condition"@en;
+  rdfs:label "Elementaire conditie"@nl;
+  sh:property echelon1:ElementaryCondition.condition;
+  sh:property echelon1:ElementaryCondition.references;
+.
+echelon1:ElementaryCondition.condition a sh:PropertyShape;
+  sh:path lg:condition;
+  sh:name "lg:condition";
+  rdfs:label "condition"@en;
+  rdfs:label "conditie"@nl;
+  sh:datatype rdf:langString;
+.
+echelon1:ElementaryCondition.references a sh:PropertyShape;
+  sh:path lg:references;
+  sh:name "lg:references";
+  rdfs:label "references"@en;
+  rdfs:label "refereert aan"@nl;
+  sh:class skos:Concept;
+.
+
+#
+# Institutionele norm
+#
+echelon1:InstitutionalRule a sh:NodeShape;
+  sh:targetClass lomo:InstitutionalRule;
+  sh:name "lomo:InstitutionalRule";
+  rdfs:label "Institutional rule"@en;
+  rdfs:label "Van-rechtswege regel"@nl;
+.
+
+#
+# Definitie
+#
+# TODO: Nog niet helemaal duidelijk of definitie dan wel ConstitutiveRule beter zijn...
+#
+echelon1:Definition a sh:NodeShape;
+  sh:targetClass lomo:Definition;
+  sh:name "lomo:Definition";
+  sh:property echelon1:Definition.defines;
+.
+echelon1:Definition.defines a sh:PropertyShape;
+  sh:path lomo:defines;
+  sh:name "lomo:defines";
+  rdfs:label "definieert"@nl;
+  rdfs:label "defines"@en;
+  sh:class skos:Concept;
+.
+
+#
+# Begrip
+#
+echelon1:Concept a sh:NodeShape;
+  sh:targetClass skos:Concept;
+  sh:name "skos:Concept";
+  rdfs:label "Concept"@en;
+  rdfs:label "Begrip"@nl;
+  sh:property echelon1:Concept.prefLabel
+.
+echelon1:Concept.prefLabel a sh:PropertyShape;
+  sh:path skos:prefLabel;
+  sh:name "skos:prefLabel";
+  rdfs:label "preferred label"@en;
+  rdfs:label "voorkeursterm"@nl;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype rdf:langString;
+.
+
+#
+# Handeling
+#
+echelon1:Action a sh:NodeShape;
+  sh:targetClass lomo:Action;
+  sh:name "lomo:Action";
+  rdfs:label "Action"@en;
+  rdfs:label "Handeling"@nl;
+.

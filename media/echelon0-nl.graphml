@@ -84,8 +84,8 @@
                            xmlns:yed="http://www.yworks.com/xml/yed/3"
                            height="59.0"
                            width="134.0"
-                           x="775.0"
-                           y="441.0"/>
+                           x="371.0"
+                           y="500.0"/>
                <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
                <y:BorderStyle color="#000000" type="line" width="1.0"/>
                <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
@@ -142,7 +142,7 @@
                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                           height="123.0"
+                           height="149.0"
                            width="186.0"
                            x="1211.0"
                            y="524.0"/>
@@ -181,12 +181,14 @@
                             visible="true"
                             width="65.541015625"
                             x="2.0"
-                            y="30.1328125">- Juridisch effect
-- Normuitdrukking
+                            y="30.1328125">- Normuitdrukking
+- Juridisch effect
 - Primair subject
+- Conditie
+- Term
 - Object
-- Secundair subject
-- Conditie<y:LabelModel>
+- Definitie
+- Secundair subject<y:LabelModel>
                      <y:ErdAttributesNodeLabelModel/>
                   </y:LabelModel>
                   <y:ModelParameter>
@@ -208,7 +210,7 @@
                            xmlns:yed="http://www.yworks.com/xml/yed/3"
                            height="96.0"
                            width="195.0"
-                           x="458.0"
+                           x="699.0"
                            y="500.0"/>
                <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
                <y:BorderStyle color="#000000" type="line" width="1.0"/>
@@ -380,6 +382,68 @@ end (integer) [1,1]
             </y:GenericNode>
          </data>
       </node>
+      <node id="http://bp4mc2.org/def/echelon0#SubdivisionType">
+         <data key="d3">http://bp4mc2.org/def/echelon0#SubdivisionType</data>
+         <data key="d6">
+            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+               <y:Geometry xmlns="http://graphml.graphdrawing.org/xmlns"
+                           xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                           xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                           xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xmlns:yed="http://www.yworks.com/xml/yed/3"
+                           height="90.0"
+                           width="123.0"
+                           x="376.5"
+                           y="642.0"/>
+               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
+                            configuration="com.yworks.entityRelationship.label.name"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasLineColor="false"
+                            height="18.1328125"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="internal"
+                            modelPosition="t"
+                            textColor="#000000"
+                            verticalTextPosition="bottom"
+                            visible="true"
+                            width="44.25390625"
+                            x="17.873046875"
+                            y="4.0">Onderdeeltype</y:NodeLabel>
+               <y:NodeLabel alignment="left" autoSizePolicy="content"
+                            configuration="com.yworks.entityRelationship.label.attributes"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasBackgroundColor="false"
+                            hasLineColor="false"
+                            height="46.3984375"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="custom"
+                            textColor="#000000"
+                            verticalTextPosition="top"
+                            visible="true"
+                            width="65.541015625"
+                            x="2.0"
+                            y="30.1328125">- Artikel
+- Onderdeel
+- Hoofdstuk
+- Lid<y:LabelModel>
+                     <y:ErdAttributesNodeLabelModel/>
+                  </y:LabelModel>
+                  <y:ModelParameter>
+                     <y:ErdAttributesNodeLabelModelParameter/>
+                  </y:ModelParameter>
+               </y:NodeLabel>
+            </y:GenericNode>
+         </data>
+      </node>
       <node id="http://bp4mc2.org/def/echelon0#Annotation.Target">
          <data key="d3">http://bp4mc2.org/def/echelon0#Annotation.Target</data>
          <data key="d6">
@@ -441,6 +505,69 @@ end (integer) [1,1]
          </data>
       </node>
       <edge source="http://data.europa.eu/eli/ontology#WorkSubdivision"
+            target="http://bp4mc2.org/def/echelon0#SubdivisionType">
+         <data key="d7">urn:md5:http://data.europa.eu/eli/ontology#WorkSubdivisionhttp://data.europa.eu/eli/ontology#WorkSubdivision.type_subdivision http://data.europa.eu/eli/ontology#type_subdivisionhttp://bp4mc2.org/def/echelon0#SubdivisionType</data>
+         <data key="d8">http://data.europa.eu/eli/ontology#WorkSubdivision.type_subdivision http://data.europa.eu/eli/ontology#type_subdivision</data>
+         <data key="d10">
+            <y:PolyLineEdge>
+               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
+                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns:yed="http://www.yworks.com/xml/yed/3"
+                       sx="0.0"
+                       sy="0.0"
+                       tx="0.0"
+                       ty="0.0"/>
+               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
+                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:yed="http://www.yworks.com/xml/yed/3"
+                            color="#000000"
+                            type="line"
+                            width="1.0"/>
+               <y:Arrows source="none" target="standard"/>
+               <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
+                            distance="2.0"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasLineColor="false"
+                            modelName="custom"
+                            preferredPlacement="anywhere"
+                            ratio="0.5"
+                            textColor="#000000"
+                            visible="true"
+                            x="-74.6064453125"
+                            y="32.4407958984375">type onderdeel [0,1]<y:LabelModel>
+                     <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+                  </y:LabelModel>
+                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
+                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                     <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
+                                                     ratio="0.5"
+                                                     segment="0"/>
+                  </y:ModelParameter>
+                  <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute"
+                                                  angleRotationOnRightSide="co"
+                                                  distance="-1.0"
+                                                  frozen="true"
+                                                  placement="anywhere"
+                                                  side="anywhere"
+                                                  sideReference="relative_to_edge_flow"/>
+               </y:EdgeLabel>
+               <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge source="http://data.europa.eu/eli/ontology#WorkSubdivision"
             target="http://data.europa.eu/eli/ontology#Work">
          <data key="d7">urn:md5:http://data.europa.eu/eli/ontology#WorkSubdivisionhttp://data.europa.eu/eli/ontology#WorkSubdivision.is_part_of http://data.europa.eu/eli/ontology#is_part_ofhttp://data.europa.eu/eli/ontology#Work</data>
          <data key="d8">http://data.europa.eu/eli/ontology#WorkSubdivision.is_part_of http://data.europa.eu/eli/ontology#is_part_of</data>
@@ -456,7 +583,7 @@ end (integer) [1,1]
                        sy="0.0"
                        tx="0.0"
                        ty="0.0">
-                  <y:Point x="842.0" y="322.0"/>
+                  <y:Point x="438.0" y="322.0"/>
                </y:Path>
                <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
                             xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
@@ -479,8 +606,8 @@ end (integer) [1,1]
                             ratio="0.5"
                             textColor="#000000"
                             visible="true"
-                            x="-79.65126730410475"
-                            y="-128.0911865234375">onderdeel van [1,1]<y:LabelModel>
+                            x="-54.470703125"
+                            y="-187.05743408203125">onderdeel van [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
                   <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
@@ -490,7 +617,7 @@ end (integer) [1,1]
                                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                     xmlns:yed="http://www.yworks.com/xml/yed/3">
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
-                                                     ratio="0.3842642204316298"
+                                                     ratio="0.0"
                                                      segment="-1"/>
                   </y:ModelParameter>
                   <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute"
@@ -521,9 +648,9 @@ end (integer) [1,1]
                        sy="0.0"
                        tx="0.0"
                        ty="0.0">
-                  <y:Point x="385.5" y="548.0"/>
-                  <y:Point x="385.5" y="666.5"/>
-                  <y:Point x="555.5" y="666.5"/>
+                  <y:Point x="626.5" y="548.0"/>
+                  <y:Point x="626.5" y="666.5"/>
+                  <y:Point x="796.5" y="666.5"/>
                </y:Path>
                <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
                             xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
@@ -609,7 +736,7 @@ end (integer) [1,1]
                             ratio="0.5"
                             textColor="#000000"
                             visible="true"
-                            x="-12.653606043452783"
+                            x="-83.59361766713903"
                             y="-75.591064453125">realiseert [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
@@ -672,8 +799,8 @@ end (integer) [1,1]
                             ratio="0.5"
                             textColor="#000000"
                             visible="true"
-                            x="-13.858253421639802"
-                            y="37.45355224609375">betreft [1,1]<y:LabelModel>
+                            x="-15.505508386948577"
+                            y="37.42779541015625">betreft [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
                   <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
@@ -798,7 +925,7 @@ end (integer) [1,1]
                             ratio="0.5"
                             textColor="#000000"
                             visible="true"
-                            x="-234.5185546875"
+                            x="-114.003662109375"
                             y="-9.06640625">bron [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>

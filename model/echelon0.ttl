@@ -15,6 +15,8 @@ PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 PREFIX echelon0: <http://bp4mc2.org/def/echelon0#>
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+PREFIX sdt: <http://bp4mc2.org/subdivisiontype/>
 
 #
 # Text: eli:Expression
@@ -65,7 +67,7 @@ echelon0:Expression.realizes a sh:PropertyShape;
   sh:maxCount 1;
   sh:minCount 1;
   sh:class eli:Work;
-  rdfs:comment "As eli:WorkSubdivision is a subclass of eli:Work, an expression might also realize a worksubdisivion";
+  rdfs:comment "As eli:WorkSubdivision is a subclass of eli:Work, an expression might also realize a worksubdivision";
 .
 echelon0:Expression.number a sh:PropertyShape;
   sh:path eli:number;
@@ -93,6 +95,7 @@ eli:WorkSubdivision a sh:NodeShape;
   rdfs:label "Onderdeel"@nl;
   rdfs:label "Work subdivision"@en;
   sh:property eli:WorkSubdivision.is_part_of;
+  sh:property eli:WorkSubdivision.type_subdivision;
 .
 eli:WorkSubdivision.is_part_of a sh:PropertyShape;
   sh:path eli:is_part_of;
@@ -102,6 +105,40 @@ eli:WorkSubdivision.is_part_of a sh:PropertyShape;
   sh:maxCount 1;
   sh:minCount 1;
   sh:class eli:Work;
+.
+eli:WorkSubdivision.type_subdivision a sh:PropertyShape;
+  sh:path eli:type_subdivision;
+  sh:name "eli:type_subdivision";
+  rdfs:label "type onderdeel"@nl;
+  rdfs:label "type subdivision"@en;
+  sh:maxCount 1;
+  sh:node echelon0:SubdivisionType;
+.
+echelon0:SubdivisionType a sh:NodeShape;
+  sh:name "eli:SubdivisionType";
+  rdfs:label "Onderdeeltype"@nl;
+  rdfs:label "Subdivision type"@en;
+  sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue eli:SubdivisionTypeTable
+  ]
+.
+# Vreemd genoeg lijkt deze tabel er nog niet te zijn (!!!)
+sdt:Hoofdstuk a skos:Concept;
+  rdfs:label "Hoofdstuk"@nl;
+  skos:inScheme  eli:SubdivisionTypeTable;
+.
+sdt:Artikel a skos:Concept;
+  rdfs:label "Artikel"@nl;
+  skos:inScheme  eli:SubdivisionTypeTable;
+.
+sdt:Lid a skos:Concept;
+  rdfs:label "Lid"@nl;
+  skos:inScheme  eli:SubdivisionTypeTable;
+.
+sdt:Onderdeel a skos:Concept;
+  rdfs:label "Onderdeel"@nl;
+  skos:inScheme  eli:SubdivisionTypeTable;
 .
 
 eli:Work a sh:NodeShape;
@@ -148,42 +185,52 @@ echelon0:Annotation.Body a sh:NodeShape;
   rdfs:label "Legal grammar function"@en;
   sh:property [
     sh:path skos:inScheme;
-    sh:hasValue echelon0:LegalGrammarFunctions;
+    sh:hasValue lg:LegalGrammarFunctions;
   ]
 .
-echelon0:LegalGrammarFunctions a skos:ConceptScheme;
+lg:LegalGrammarFunctions a skos:ConceptScheme;
   rdfs:label "Juridisch grammaticale functies"@nl;
   rdfs:label "Legal Grammar Functions"@en;
 .
-echelon0:PrimarySubject a skos:Concept;
+lg:PrimarySubject a skos:Concept;
   rdfs:label "Primary subject"@en;
   rdfs:label "Primair subject"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
-echelon0:SecondaryySubject a skos:Concept;
+lg:SecondaryySubject a skos:Concept;
   rdfs:label "Secondary subject"@en;
   rdfs:label "Secundair subject"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
-echelon0:NormExpression a skos:Concept;
+lg:NormExpression a skos:Concept;
   rdfs:label "Norm expression"@en;
   rdfs:label "Normuitdrukking"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
-echelon0:Object a skos:Concept;
+lg:Object a skos:Concept;
   rdfs:label "Object"@en;
   rdfs:label "Object"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
-echelon0:Condition a skos:Concept;
+lg:Condition a skos:Concept;
   rdfs:label "Condition"@en;
   rdfs:label "Conditie"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
-echelon0:LegalEffect a skos:Concept;
+lg:LegalEffect a skos:Concept;
   rdfs:label "Legal effect"@en;
   rdfs:label "Juridisch effect"@nl;
-  skos:inScheme echelon0:LegalGrammarFunctions;
+  skos:inScheme lg:LegalGrammarFunctions;
+.
+lg:Term a skos:Concept;
+  rdfs:label "Term"@en;
+  rdfs:label "Term"@nl;
+  skos:inScheme lg:LegalGrammarFunctions;
+.
+lg:Definition a skos:Concept;
+  rdfs:label "Definition"@en;
+  rdfs:label "Definitie"@nl;
+  skos:inScheme lg:LegalGrammarFunctions;
 .
 echelon0:Annotation.target a sh:PropertyShape;
   sh:path oa:target;
