@@ -38,6 +38,7 @@ echelon1:LegalRule a sh:NodeShape;
   rdfs:label "Juridische regel"@nl;
   rdfs:label "Legal rule"@en;
   sh:property echelon1:LegalRule.establishedIn;
+  sh:property echelon1:LegalRule.condition;
 .
 echelon1:LegalRule.establishedIn a sh:PropertyShape;
   sh:path lomo:establishedIn;
@@ -45,6 +46,14 @@ echelon1:LegalRule.establishedIn a sh:PropertyShape;
   rdfs:label "bepaald in"@nl;
   rdfs:label "established in"@en;
   sh:class eli:Expression; #Vermoedelijk eigenlijk eli:LegalExpression, maar die er maar even tussenuit...
+.
+echelon1:LegalRule.condition a sh:PropertyShape;
+  sh:path lg:condition;
+  sh:name "lg:condition";
+  rdfs:label "conditie"@nl;
+  rdfs:label "condition"@en;
+  sh:class lg:Condition;
+  sh:maxCount 1;
 .
 
 echelon1:ConstitutiveRule a sh:NodeShape;
@@ -55,6 +64,17 @@ echelon1:ConstitutiveRule a sh:NodeShape;
 .
 
 #
+# LegalGrammar properties
+#
+# NB: Deze properties "hangen" eigenlijk zowel aan InstitutionalRule en PrescriptiveRule, maar NIET aan Definition
+#
+# De taxonomie van LegalRules lijkt nog niet helemaal perfect, want we zien meerdere varianten:
+# - Een definiërende constitutieve regel: deze definieert "slechts" een begrip, heeft geen rechtsgevolgen en schrijft niks voor
+# - Een van-rechtswege constitutieve (en institutionele) regel: deze kent rechtsgevolgen aan omstandigheden toe, zonder een bevoegdheid te verlenen
+# - Een bevoegdheidsverlenende constitutieve (en institutionele) regel: deze kent een bevoegdheid tot uitvoeren van een handeling toe, maar zonder rechtsgevolgen
+# - Een prescriptieve regel: deze normeert gedrag en (kan) rechtsgevolgen hebben.
+
+#
 # Norm
 #
 echelon1:PrescriptiveRule a sh:NodeShape;
@@ -62,32 +82,42 @@ echelon1:PrescriptiveRule a sh:NodeShape;
   sh:name "lomo:PrescriptiveRule";
   rdfs:label "Norm"@nl;
   rdfs:label "Prescriptive rule"@en;
-  sh:property echelon1:PrescriptiveRule.primarySubject;
-  sh:property echelon1:PrescriptiveRule.secondarySubject;
-  sh:property echelon1:PrescriptiveRule.object;
   sh:property echelon1:PrescriptiveRule.produces;
-  sh:property echelon1:PrescriptiveRule.legalEffect;
-  sh:property echelon1:PrescriptiveRule.condition;
+  sh:property echelon1:LegalRule.primarySubject;
+  sh:property echelon1:LegalRule.secondarySubject;
+  sh:property echelon1:LegalRule.object;
+  sh:property echelon1:LegalRule.legalEffect;
 .
-echelon1:PrescriptiveRule.primarySubject a sh:PropertyShape;
+echelon1:LegalRule.primarySubject a sh:PropertyShape;
   sh:path lg:primarySubject;
   sh:name "lg:primarySubject";
   rdfs:label "primair subject"@nl;
   rdfs:label "primary subject"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
   sh:class skos:Concept;
 .
-echelon1:PrescriptiveRule.secondarySubject a sh:PropertyShape;
+echelon1:LegalRule.secondarySubject a sh:PropertyShape;
   sh:path lg:secondarySubject;
   sh:name "lg:secondarySubject";
   rdfs:label "secundair subject"@nl;
   rdfs:label "secondary subject"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
   sh:class skos:Concept;
 .
-echelon1:PrescriptiveRule.object a sh:PropertyShape;
+echelon1:LegalRule.object a sh:PropertyShape;
   sh:path lg:object;
   sh:name "lg:object";
   rdfs:label "object"@nl;
   rdfs:label "object"@en;
+  sh:class skos:Concept;
+.
+echelon1:LegalRule.legalEffect a sh:PropertyShape;
+  sh:path lg:legalEffect;
+  sh:name "lg:legalEffect";
+  rdfs:label "juridisch effect"@nl;
+  rdfs:label "legal effect"@en;
   sh:class skos:Concept;
 .
 echelon1:PrescriptiveRule.produces a sh:PropertyShape;
@@ -96,13 +126,6 @@ echelon1:PrescriptiveRule.produces a sh:PropertyShape;
   rdfs:label "normeert"@nl;
   rdfs:label "produces"@en;
   sh:class lomo:Action;
-.
-echelon1:PrescriptiveRule.condition a sh:PropertyShape;
-  sh:path lg:condition;
-  sh:name "lg:condition";
-  rdfs:label "conditie"@nl;
-  rdfs:label "condition"@en;
-  sh:class lg:Condition;
 .
 
 #
@@ -132,6 +155,32 @@ echelon1:CompoundCondition.operator a sh:PropertyShape;
   sh:name "lg:operator";
   rdfs:label "operator"@en;
   rdfs:label "operator"@nl;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node echelon1:CompountCondition.Operator;
+.
+echelon1:CompountCondition.Operator a sh:NodeShape;
+  sh:name "Operator";
+  rdfs:label "Operator"@en;
+  rdfs:label "Operator"@nl;
+  sh:property [
+    sh:path skos:inScheme;
+    sh:hasValue lg:Operators;
+  ]
+.
+lg:Operators a skos:ConceptScheme;
+  rdfs:label "Operatoren"@nl;
+  rdfs:label "Operators"@en;
+.
+lg:AND a skos:Concept;
+  rdfs:label "AND"@en;
+  rdfs:label "EN"@nl;
+  skos:inScheme lg:Operators;
+.
+lg:OR a skos:Concept;
+  rdfs:label "OR"@en;
+  rdfs:label "OF"@nl;
+  skos:inScheme lg:Operators;
 .
 echelon1:CompoundCondition.conditionList a sh:PropertyShape;
   sh:path lg:conditionList;
@@ -139,6 +188,8 @@ echelon1:CompoundCondition.conditionList a sh:PropertyShape;
   rdfs:label "condition list"@en;
   rdfs:label "conditielijst"@nl;
   sh:class rdf:List;
+  sh:minCount 1;
+  sh:maxCount 1;
 .
 
 echelon1:ElementaryCondition a sh:NodeShape;
@@ -154,6 +205,8 @@ echelon1:ElementaryCondition.condition a sh:PropertyShape;
   sh:name "lg:condition";
   rdfs:label "condition"@en;
   rdfs:label "conditie"@nl;
+  sh:minCount 1;
+  sh:maxCount 1;
   sh:datatype rdf:langString;
 .
 echelon1:ElementaryCondition.references a sh:PropertyShape;
@@ -172,6 +225,18 @@ echelon1:InstitutionalRule a sh:NodeShape;
   sh:name "lomo:InstitutionalRule";
   rdfs:label "Institutional rule"@en;
   rdfs:label "Van-rechtswege regel"@nl;
+  sh:property echelon1:InstitutionalRule.empowers;
+  sh:property echelon1:LegalRule.primarySubject;
+  sh:property echelon1:LegalRule.secondarySubject;
+  sh:property echelon1:LegalRule.object;
+  sh:property echelon1:LegalRule.legalEffect;
+.
+echelon1:InstitutionalRule.empowers a sh:PropertyShape;
+  sh:path lg:empowers;
+  sh:name "lg:empowers";
+  rdfs:label "empowers"@en;
+  rdfs:label "machtigt"@nl;
+  sh:class lomo:Action;
 .
 
 #
@@ -189,6 +254,8 @@ echelon1:Definition.defines a sh:PropertyShape;
   sh:name "lomo:defines";
   rdfs:label "definieert"@nl;
   rdfs:label "defines"@en;
+  sh:minCount 1;
+  sh:maxCount 1;
   sh:class skos:Concept;
 .
 
