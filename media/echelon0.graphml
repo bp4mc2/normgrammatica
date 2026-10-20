@@ -132,72 +132,6 @@
             </y:GenericNode>
          </data>
       </node>
-      <node id="http://bp4mc2.org/def/echelon0#Annotation.Body">
-         <data key="d3">http://bp4mc2.org/def/echelon0#Annotation.Body</data>
-         <data key="d6">
-            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-               <y:Geometry xmlns="http://graphml.graphdrawing.org/xmlns"
-                           xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                           xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                           xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                           xmlns:yed="http://www.yworks.com/xml/yed/3"
-                           height="149.0"
-                           width="186.0"
-                           x="1211.0"
-                           y="524.0"/>
-               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
-                            configuration="com.yworks.entityRelationship.label.name"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasLineColor="false"
-                            height="18.1328125"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="internal"
-                            modelPosition="t"
-                            textColor="#000000"
-                            verticalTextPosition="bottom"
-                            visible="true"
-                            width="44.25390625"
-                            x="17.873046875"
-                            y="4.0">skos:Concept</y:NodeLabel>
-               <y:NodeLabel alignment="left" autoSizePolicy="content"
-                            configuration="com.yworks.entityRelationship.label.attributes"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasBackgroundColor="false"
-                            hasLineColor="false"
-                            height="46.3984375"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="custom"
-                            textColor="#000000"
-                            verticalTextPosition="top"
-                            visible="true"
-                            width="65.541015625"
-                            x="2.0"
-                            y="30.1328125">- Norm expression
-- Legal effect
-- Primary subject
-- Condition
-- Term
-- Object
-- Definition
-- Secondary subject<y:LabelModel>
-                     <y:ErdAttributesNodeLabelModel/>
-                  </y:LabelModel>
-                  <y:ModelParameter>
-                     <y:ErdAttributesNodeLabelModelParameter/>
-                  </y:ModelParameter>
-               </y:NodeLabel>
-            </y:GenericNode>
-         </data>
-      </node>
       <node id="http://bp4mc2.org/def/echelon0#Expression">
          <data key="d3">http://bp4mc2.org/def/echelon0#Expression</data>
          <data key="d6">
@@ -321,6 +255,114 @@ schema:position (integer) [0,1]
             </y:GenericNode>
          </data>
       </node>
+      <node id="http://bp4mc2.org/def/echelon0#AnnotationTarget">
+         <data key="d3">http://bp4mc2.org/def/echelon0#AnnotationTarget</data>
+         <data key="d6">
+            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+               <y:Geometry height="90.0" width="80.0" x="637.0" y="277.0"/>
+               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
+                            configuration="com.yworks.entityRelationship.label.name"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasLineColor="false"
+                            height="18.1328125"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="internal"
+                            modelPosition="t"
+                            textColor="#000000"
+                            verticalTextPosition="bottom"
+                            visible="true"
+                            width="44.25390625"
+                            x="17.873046875"
+                            y="4.0">Target</y:NodeLabel>
+               <y:NodeLabel alignment="left" autoSizePolicy="content"
+                            configuration="com.yworks.entityRelationship.label.attributes"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasBackgroundColor="false"
+                            hasLineColor="false"
+                            height="46.3984375"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="custom"
+                            textColor="#000000"
+                            verticalTextPosition="top"
+                            visible="true"
+                            width="65.541015625"
+                            x="2.0"
+                            y="30.1328125">
+                  <y:LabelModel>
+                     <y:ErdAttributesNodeLabelModel/>
+                  </y:LabelModel>
+                  <y:ModelParameter>
+                     <y:ErdAttributesNodeLabelModelParameter/>
+                  </y:ModelParameter>
+               </y:NodeLabel>
+            </y:GenericNode>
+         </data>
+      </node>
+      <node id="http://bp4mc2.org/def/echelon0#AnnotationBody">
+         <data key="d3">http://bp4mc2.org/def/echelon0#AnnotationBody</data>
+         <data key="d6">
+            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+               <y:Geometry height="90.0" width="80.0" x="637.0" y="277.0"/>
+               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
+                            configuration="com.yworks.entityRelationship.label.name"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasLineColor="false"
+                            height="18.1328125"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="internal"
+                            modelPosition="t"
+                            textColor="#000000"
+                            verticalTextPosition="bottom"
+                            visible="true"
+                            width="44.25390625"
+                            x="17.873046875"
+                            y="4.0">skos:Concept</y:NodeLabel>
+               <y:NodeLabel alignment="left" autoSizePolicy="content"
+                            configuration="com.yworks.entityRelationship.label.attributes"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasBackgroundColor="false"
+                            hasLineColor="false"
+                            height="46.3984375"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="custom"
+                            textColor="#000000"
+                            verticalTextPosition="top"
+                            visible="true"
+                            width="65.541015625"
+                            x="2.0"
+                            y="30.1328125">- Norm expression
+- Legal effect
+- Primary subject
+- Condition
+- Term
+- Object
+- Definition
+- Secondary subject<y:LabelModel>
+                     <y:ErdAttributesNodeLabelModel/>
+                  </y:LabelModel>
+                  <y:ModelParameter>
+                     <y:ErdAttributesNodeLabelModelParameter/>
+                  </y:ModelParameter>
+               </y:NodeLabel>
+            </y:GenericNode>
+         </data>
+      </node>
       <node id="http://bp4mc2.org/def/echelon0#TextPositionSelector">
          <data key="d3">http://bp4mc2.org/def/echelon0#TextPositionSelector</data>
          <data key="d6">
@@ -435,66 +477,6 @@ oa:start (integer) [1,1]
 - Onderdeel
 - Hoofdstuk
 - Lid<y:LabelModel>
-                     <y:ErdAttributesNodeLabelModel/>
-                  </y:LabelModel>
-                  <y:ModelParameter>
-                     <y:ErdAttributesNodeLabelModelParameter/>
-                  </y:ModelParameter>
-               </y:NodeLabel>
-            </y:GenericNode>
-         </data>
-      </node>
-      <node id="http://bp4mc2.org/def/echelon0#Annotation.Target">
-         <data key="d3">http://bp4mc2.org/def/echelon0#Annotation.Target</data>
-         <data key="d6">
-            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-               <y:Geometry xmlns="http://graphml.graphdrawing.org/xmlns"
-                           xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                           xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                           xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                           xmlns:yed="http://www.yworks.com/xml/yed/3"
-                           height="48.0"
-                           width="74.0"
-                           x="1031.0"
-                           y="524.0"/>
-               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
-                            configuration="com.yworks.entityRelationship.label.name"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasLineColor="false"
-                            height="18.1328125"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="internal"
-                            modelPosition="t"
-                            textColor="#000000"
-                            verticalTextPosition="bottom"
-                            visible="true"
-                            width="44.25390625"
-                            x="17.873046875"
-                            y="4.0">Target</y:NodeLabel>
-               <y:NodeLabel alignment="left" autoSizePolicy="content"
-                            configuration="com.yworks.entityRelationship.label.attributes"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasBackgroundColor="false"
-                            hasLineColor="false"
-                            height="46.3984375"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="custom"
-                            textColor="#000000"
-                            verticalTextPosition="top"
-                            visible="true"
-                            width="65.541015625"
-                            x="2.0"
-                            y="30.1328125">
-                  <y:LabelModel>
                      <y:ErdAttributesNodeLabelModel/>
                   </y:LabelModel>
                   <y:ModelParameter>
@@ -763,30 +745,12 @@ oa:start (integer) [1,1]
          </data>
       </edge>
       <edge source="http://bp4mc2.org/def/echelon0#Annotation"
-            target="http://bp4mc2.org/def/echelon0#Annotation.Body">
-         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotationhttp://bp4mc2.org/def/echelon0#Annotation.body http://www.w3.org/ns/oa#bodyhttp://bp4mc2.org/def/echelon0#Annotation.Body</data>
+            target="http://bp4mc2.org/def/echelon0#AnnotationBody">
+         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotationhttp://bp4mc2.org/def/echelon0#Annotation.body http://www.w3.org/ns/oa#bodyhttp://bp4mc2.org/def/echelon0#AnnotationBody</data>
          <data key="d8">http://bp4mc2.org/def/echelon0#Annotation.body http://www.w3.org/ns/oa#body</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
-                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:yed="http://www.yworks.com/xml/yed/3"
-                       sx="0.0"
-                       sy="0.0"
-                       tx="0.0"
-                       ty="0.0"/>
-               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
-                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                            color="#000000"
-                            type="line"
-                            width="1.0"/>
+               <y:LineStyle color="#000000" type="line" width="1.0"/>
                <y:Arrows source="none" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -798,17 +762,10 @@ oa:start (integer) [1,1]
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true"
-                            x="-15.505508386948577"
-                            y="37.42779541015625">oa:body [1,1]<y:LabelModel>
+                            visible="true">oa:body [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
-                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                  <y:ModelParameter>
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>
@@ -826,30 +783,12 @@ oa:start (integer) [1,1]
          </data>
       </edge>
       <edge source="http://bp4mc2.org/def/echelon0#Annotation"
-            target="http://bp4mc2.org/def/echelon0#Annotation.Target">
-         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotationhttp://bp4mc2.org/def/echelon0#Annotation.target http://www.w3.org/ns/oa#targethttp://bp4mc2.org/def/echelon0#Annotation.Target</data>
+            target="http://bp4mc2.org/def/echelon0#AnnotationTarget">
+         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotationhttp://bp4mc2.org/def/echelon0#Annotation.target http://www.w3.org/ns/oa#targethttp://bp4mc2.org/def/echelon0#AnnotationTarget</data>
          <data key="d8">http://bp4mc2.org/def/echelon0#Annotation.target http://www.w3.org/ns/oa#target</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
-                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:yed="http://www.yworks.com/xml/yed/3"
-                       sx="0.0"
-                       sy="0.0"
-                       tx="0.0"
-                       ty="0.0"/>
-               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
-                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                            color="#000000"
-                            type="line"
-                            width="1.0"/>
+               <y:LineStyle color="#000000" type="line" width="1.0"/>
                <y:Arrows source="diamond" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -861,17 +800,10 @@ oa:start (integer) [1,1]
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true"
-                            x="-78.4234619140625"
-                            y="37.46435546875">oa:target [1,1]<y:LabelModel>
+                            visible="true">oa:target [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
-                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                  <y:ModelParameter>
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>
@@ -888,31 +820,13 @@ oa:start (integer) [1,1]
             </y:PolyLineEdge>
          </data>
       </edge>
-      <edge source="http://bp4mc2.org/def/echelon0#Annotation.Target"
+      <edge source="http://bp4mc2.org/def/echelon0#AnnotationTarget"
             target="http://bp4mc2.org/def/echelon0#Expression">
-         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotation.Targethttp://bp4mc2.org/def/echelon0#Annotation.Target.source http://www.w3.org/ns/oa#sourcehttp://bp4mc2.org/def/echelon0#Expression</data>
-         <data key="d8">http://bp4mc2.org/def/echelon0#Annotation.Target.source http://www.w3.org/ns/oa#source</data>
+         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#AnnotationTargethttp://bp4mc2.org/def/echelon0#AnnotationTarget.source http://www.w3.org/ns/oa#sourcehttp://bp4mc2.org/def/echelon0#Expression</data>
+         <data key="d8">http://bp4mc2.org/def/echelon0#AnnotationTarget.source http://www.w3.org/ns/oa#source</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
-                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:yed="http://www.yworks.com/xml/yed/3"
-                       sx="0.0"
-                       sy="0.0"
-                       tx="0.0"
-                       ty="0.0"/>
-               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
-                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                            color="#000000"
-                            type="line"
-                            width="1.0"/>
+               <y:LineStyle color="#000000" type="line" width="1.0"/>
                <y:Arrows source="none" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -924,17 +838,10 @@ oa:start (integer) [1,1]
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true"
-                            x="-114.003662109375"
-                            y="-9.06640625">oa:source [1,1]<y:LabelModel>
+                            visible="true">oa:source [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
-                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                  <y:ModelParameter>
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>
@@ -951,31 +858,13 @@ oa:start (integer) [1,1]
             </y:PolyLineEdge>
          </data>
       </edge>
-      <edge source="http://bp4mc2.org/def/echelon0#Annotation.Target"
+      <edge source="http://bp4mc2.org/def/echelon0#AnnotationTarget"
             target="http://bp4mc2.org/def/echelon0#TextPositionSelector">
-         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#Annotation.Targethttp://bp4mc2.org/def/echelon0#Annotation.Target.selector http://www.w3.org/ns/oa#selectorhttp://bp4mc2.org/def/echelon0#TextPositionSelector</data>
-         <data key="d8">http://bp4mc2.org/def/echelon0#Annotation.Target.selector http://www.w3.org/ns/oa#selector</data>
+         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon0#AnnotationTargethttp://bp4mc2.org/def/echelon0#AnnotationTarget.selector http://www.w3.org/ns/oa#selectorhttp://bp4mc2.org/def/echelon0#TextPositionSelector</data>
+         <data key="d8">http://bp4mc2.org/def/echelon0#AnnotationTarget.selector http://www.w3.org/ns/oa#selector</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
-                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:yed="http://www.yworks.com/xml/yed/3"
-                       sx="0.0"
-                       sy="0.0"
-                       tx="0.0"
-                       ty="0.0"/>
-               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
-                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                            color="#000000"
-                            type="line"
-                            width="1.0"/>
+               <y:LineStyle color="#000000" type="line" width="1.0"/>
                <y:Arrows source="none" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -987,17 +876,10 @@ oa:start (integer) [1,1]
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true"
-                            x="-49.05078125"
-                            y="37.4403076171875">oa:selector [1,n]<y:LabelModel>
+                            visible="true">oa:selector [1,n]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
-                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                  <y:ModelParameter>
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>

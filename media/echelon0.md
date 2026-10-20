@@ -53,8 +53,8 @@ The substance of Work is ideas.|
 |Eigenschap|Kardinaliteit|Datatype/klasse|
 |----------|-------------|---------------|
 |oa:motivation|1..1||
-|oa:body|1..1|[skos:Concept](#TAnnotation.Body)|
-|oa:target|1..1|[Target](#TAnnotation.Target)|
+|oa:body|1..1|[skos:Concept](#TAnnotationBody)|
+|oa:target|1..1|[Target](#TAnnotationTarget)|
 
 ### oa:TextPositionSelector {#TTextPositionSelector}
 
@@ -66,3 +66,34 @@ The substance of Work is ideas.|
 |----------|-------------|---------------|
 |oa:start|1..1|[integer](http://www.w3.org/2001/XMLSchema#integer)|
 |oa:end|1..1|[integer](http://www.w3.org/2001/XMLSchema#integer)|
+
+## Datatypes
+
+### Target {#TAnnotationTarget}
+
+|Eigenschap|Kardinaliteit|Datatype/klasse|
+|----------|-------------|---------------|
+|oa:source|1..1|[eli:Expression](#TExpression)|
+|oa:selector|1..n|[oa:TextPositionSelector](#TTextPositionSelector)|
+
+### eli:SubdivisionType {#TSubdivisionType}
+
+|Waarde|Omschrijving|
+|------|------------|
+|Artikel||
+|Onderdeel||
+|Hoofdstuk||
+|Lid||
+
+### skos:Concept {#TAnnotationBody}
+
+|Waarde|Omschrijving|
+|------|------------|
+|Normuitdrukking||
+|Juridisch effect||
+|Primair subject||
+|Conditie||
+|Term||
+|Object||
+|Definitie||
+|Secundair subject||

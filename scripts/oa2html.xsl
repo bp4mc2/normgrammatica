@@ -128,7 +128,7 @@
     </head>
     <body>
       <h2>Voorbeelden</h2>
-      <table>
+      <table class='legend'>
         <tr>
           <th>Normbepaling</th>
           <th>Begripsbepaling</th>

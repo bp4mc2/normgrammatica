@@ -177,9 +177,9 @@ echelon0:Annotation.body a sh:PropertyShape;
   rdfs:label "about"@en;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:node echelon0:Annotation.Body;
+  sh:node echelon0:AnnotationBody;
 .
-echelon0:Annotation.Body a sh:NodeShape;
+echelon0:AnnotationBody a sh:NodeShape;
   sh:name "skos:Concept";
   rdfs:label "Juridisch grammaticale functie"@nl;
   rdfs:label "Legal grammar function"@en;
@@ -239,17 +239,17 @@ echelon0:Annotation.target a sh:PropertyShape;
   rdfs:label "targets"@en;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:node echelon0:Annotation.Target;
+  sh:node echelon0:AnnotationTarget;
   sh:nodeKind sh:BlankNode;
 .
-echelon0:Annotation.Target a sh:NodeShape;
+echelon0:AnnotationTarget a sh:NodeShape;
   sh:name "Target";
   rdfs:label "Doel"@nl;
   rdfs:label "Target"@en;
-  sh:property echelon0:Annotation.Target.source;
-  sh:property echelon0:Annotation.Target.selector;
+  sh:property echelon0:AnnotationTarget.source;
+  sh:property echelon0:AnnotationTarget.selector;
 .
-echelon0:Annotation.Target.source a sh:PropertyShape;
+echelon0:AnnotationTarget.source a sh:PropertyShape;
   sh:path oa:source;
   sh:name "oa:source";
   rdfs:label "bron"@nl;
@@ -258,7 +258,7 @@ echelon0:Annotation.Target.source a sh:PropertyShape;
   sh:maxCount 1;
   sh:class eli:Expression;
 .
-echelon0:Annotation.Target.selector a sh:PropertyShape;
+echelon0:AnnotationTarget.selector a sh:PropertyShape;
   sh:path oa:selector;
   sh:name "oa:selector";
   rdfs:label "selectie"@nl;

@@ -552,6 +552,57 @@
             </y:GenericNode>
          </data>
       </node>
+      <node id="http://bp4mc2.org/def/echelon1#CompountConditionOperator">
+         <data key="d3">http://bp4mc2.org/def/echelon1#CompountConditionOperator</data>
+         <data key="d6">
+            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
+               <y:Geometry height="90.0" width="80.0" x="637.0" y="277.0"/>
+               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
+                            configuration="com.yworks.entityRelationship.label.name"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasLineColor="false"
+                            height="18.1328125"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="internal"
+                            modelPosition="t"
+                            textColor="#000000"
+                            verticalTextPosition="bottom"
+                            visible="true"
+                            width="44.25390625"
+                            x="17.873046875"
+                            y="4.0">Operator</y:NodeLabel>
+               <y:NodeLabel alignment="left" autoSizePolicy="content"
+                            configuration="com.yworks.entityRelationship.label.attributes"
+                            fontFamily="Dialog"
+                            fontSize="12"
+                            fontStyle="plain"
+                            hasBackgroundColor="false"
+                            hasLineColor="false"
+                            height="46.3984375"
+                            horizontalTextPosition="center"
+                            iconTextGap="4"
+                            modelName="custom"
+                            textColor="#000000"
+                            verticalTextPosition="top"
+                            visible="true"
+                            width="65.541015625"
+                            x="2.0"
+                            y="30.1328125">- OF
+- EN<y:LabelModel>
+                     <y:ErdAttributesNodeLabelModel/>
+                  </y:LabelModel>
+                  <y:ModelParameter>
+                     <y:ErdAttributesNodeLabelModelParameter/>
+                  </y:ModelParameter>
+               </y:NodeLabel>
+            </y:GenericNode>
+         </data>
+      </node>
       <node id="http://bp4mc2.org/def/echelon1#Action">
          <data key="d3">http://bp4mc2.org/def/echelon1#Action</data>
          <data key="d6">
@@ -603,66 +654,6 @@
                             x="2.0"
                             y="30.1328125">
                   <y:LabelModel>
-                     <y:ErdAttributesNodeLabelModel/>
-                  </y:LabelModel>
-                  <y:ModelParameter>
-                     <y:ErdAttributesNodeLabelModelParameter/>
-                  </y:ModelParameter>
-               </y:NodeLabel>
-            </y:GenericNode>
-         </data>
-      </node>
-      <node id="http://bp4mc2.org/def/echelon1#CompountCondition.Operator">
-         <data key="d3">http://bp4mc2.org/def/echelon1#CompountCondition.Operator</data>
-         <data key="d6">
-            <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-               <y:Geometry xmlns="http://graphml.graphdrawing.org/xmlns"
-                           xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                           xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                           xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                           xmlns:yed="http://www.yworks.com/xml/yed/3"
-                           height="90.0"
-                           width="80.0"
-                           x="1614.3333333333333"
-                           y="155.36031201908105"/>
-               <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
-                            configuration="com.yworks.entityRelationship.label.name"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasLineColor="false"
-                            height="18.1328125"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="internal"
-                            modelPosition="t"
-                            textColor="#000000"
-                            verticalTextPosition="bottom"
-                            visible="true"
-                            width="44.25390625"
-                            x="17.873046875"
-                            y="4.0">Operator</y:NodeLabel>
-               <y:NodeLabel alignment="left" autoSizePolicy="content"
-                            configuration="com.yworks.entityRelationship.label.attributes"
-                            fontFamily="Dialog"
-                            fontSize="12"
-                            fontStyle="plain"
-                            hasBackgroundColor="false"
-                            hasLineColor="false"
-                            height="46.3984375"
-                            horizontalTextPosition="center"
-                            iconTextGap="4"
-                            modelName="custom"
-                            textColor="#000000"
-                            verticalTextPosition="top"
-                            visible="true"
-                            width="65.541015625"
-                            x="2.0"
-                            y="30.1328125">- OF
-- EN<y:LabelModel>
                      <y:ErdAttributesNodeLabelModel/>
                   </y:LabelModel>
                   <y:ModelParameter>
@@ -1642,30 +1633,12 @@
          </data>
       </edge>
       <edge source="http://bp4mc2.org/def/echelon1#CompoundCondition"
-            target="http://bp4mc2.org/def/echelon1#CompountCondition.Operator">
-         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon1#CompoundConditionhttp://bp4mc2.org/def/echelon1#CompoundCondition.operator http://bp4mc2.org/legalgrammar/operatorhttp://bp4mc2.org/def/echelon1#CompountCondition.Operator</data>
+            target="http://bp4mc2.org/def/echelon1#CompountConditionOperator">
+         <data key="d7">urn:md5:http://bp4mc2.org/def/echelon1#CompoundConditionhttp://bp4mc2.org/def/echelon1#CompoundCondition.operator http://bp4mc2.org/legalgrammar/operatorhttp://bp4mc2.org/def/echelon1#CompountConditionOperator</data>
          <data key="d8">http://bp4mc2.org/def/echelon1#CompoundCondition.operator http://bp4mc2.org/legalgrammar/operator</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
-                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:yed="http://www.yworks.com/xml/yed/3"
-                       sx="0.0"
-                       sy="0.0"
-                       tx="0.0"
-                       ty="0.0"/>
-               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
-                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xmlns:yed="http://www.yworks.com/xml/yed/3"
-                            color="#000000"
-                            type="line"
-                            width="1.0"/>
+               <y:LineStyle color="#000000" type="line" width="1.0"/>
                <y:Arrows source="none" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -1677,17 +1650,10 @@
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true"
-                            x="19.787882486979015"
-                            y="-9.066400017051762">operator [1,1]<y:LabelModel>
+                            visible="true">operator [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
-                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
-                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
-                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
+                  <y:ModelParameter>
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>

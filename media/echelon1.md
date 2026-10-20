@@ -23,7 +23,7 @@
 |Eigenschap|Kardinaliteit|Datatype/klasse|
 |----------|-------------|---------------|
 |lg:conditionList|1..1||
-|lg:operator|1..1|[Operator](#TCompountCondition.Operator)|
+|lg:operator|1..1|[Operator](#TCompountConditionOperator)|
 
 ### lg:Condition {#TCondition}
 
@@ -119,3 +119,12 @@
 |Eigenschap|Kardinaliteit|Datatype/klasse|
 |----------|-------------|---------------|
 |skos:prefLabel|1..1|[langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString)|
+
+## Datatypes
+
+### Operator {#TCompountConditionOperator}
+
+|Waarde|Omschrijving|
+|------|------------|
+|OF||
+|EN||

@@ -157,9 +157,9 @@ echelon1:CompoundCondition.operator a sh:PropertyShape;
   rdfs:label "operator"@nl;
   sh:minCount 1;
   sh:maxCount 1;
-  sh:node echelon1:CompountCondition.Operator;
+  sh:node echelon1:CompountConditionOperator;
 .
-echelon1:CompountCondition.Operator a sh:NodeShape;
+echelon1:CompountConditionOperator a sh:NodeShape;
   sh:name "Operator";
   rdfs:label "Operator"@en;
   rdfs:label "Operator"@nl;
