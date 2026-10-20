@@ -44,7 +44,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Van-rechtswege regel</y:NodeLabel>
+                            y="4.0">Institutionele regel</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -344,7 +344,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Norm</y:NodeLabel>
+                            y="4.0">Voorschrijvende regel</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -404,7 +404,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Definition</y:NodeLabel>
+                            y="4.0">Definitie</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"

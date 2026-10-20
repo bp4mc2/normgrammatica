@@ -33,5 +33,11 @@ java -jar libs/rdf2rdf.jar -i pipeline/total.ttl -o pipeline/total-en.ttl -c scr
 java -jar libs/rdf2xml.jar pipeline/total-en.ttl media/echelon1.graphml libs/rdf2graphml.xsl add media/echelon1-edited.graphml
 java -jar libs/rdf2xml.jar pipeline/total-nl.ttl media/echelon1-nl.graphml libs/rdf2graphml.xsl add media/echelon1-edited.graphml
 
+# Create respec
+java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon1.md libs/rdf2md.xsl lang=nl
+
+# Create Respec
+npx respec -s ./media/echelon1.html -o ./dist/echelon1.html --localhost
+
 # Flush pipeline
 rm -f pipeline/*.*

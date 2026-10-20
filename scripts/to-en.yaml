@@ -28,3 +28,19 @@ queries:
           FILTER (LANG(?l)!='en')
         }
       }
+  - title: flush unused classes
+    query: >
+      prefix owl: <http://www.w3.org/2002/07/owl#>
+      prefix sh: <http://www.w3.org/ns/shacl#>
+      delete {
+        graph <urn:output> {
+          ?c ?p ?o
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?c a owl:Class.
+          ?c ?p ?o
+          FILTER NOT EXISTS {?s sh:targetClass ?c}
+        }
+      }

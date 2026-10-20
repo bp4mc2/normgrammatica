@@ -7,7 +7,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 PREFIX lg: <http://bp4mc2.org/legalgrammar/>
 
-PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/>
+PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/annotations/>
 
 #
 # Norm uit Artikel 36 lid 1 Pw
@@ -62,6 +62,42 @@ annotatie:Artikel1submPw.Definition a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=m&z=2026-07-01&g=2026-07-01>;
     oa:selector [oa:start 32; oa:end 124]
+  ];
+  oa:body lg:Definition
+.
+
+#
+# Begrip "Bijstand"
+#
+annotatie:Artikel5subaPw.Term a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=5&o=a&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 8]
+  ];
+  oa:body lg:Term
+.
+annotatie:Artikel5subaPw.Definition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=5&o=a&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 11; oa:end 41]
+  ];
+  oa:body lg:Definition
+.
+
+#
+# Begrip "Bijzondere bijstand"
+#
+annotatie:Artikel5subdPw.Term a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=5&o=d&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 19]
+  ];
+  oa:body lg:Term
+.
+annotatie:Artikel5subdPw.Definition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=5&o=d&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 22; oa:end 112]
   ];
   oa:body lg:Definition
 .

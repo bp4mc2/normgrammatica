@@ -62,7 +62,7 @@
 
 <xsl:template match="rdf:Description" mode="expression">
 
-  <b><xsl:apply-templates select="." mode="title"/></b>
+  <h3><xsl:apply-templates select="." mode="title"/></h3>
   <xsl:if test="exists(cnt:chars)"><p><xsl:apply-templates select="." mode="chars"/></p></xsl:if>
   <xsl:for-each select="key('expression',key('part',key('item',eli:realizes/@rdf:resource)/@rdf:about)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
     <xsl:choose>
@@ -104,7 +104,7 @@
         span.condition { background-color: #33ff33;}
         span.normexpression { background-color: #ff66ff;}
         span.primarysubject { background-color: #ffff00;}
-        span.secundarysubject { background-color: #eeee33;}
+        span.secondarysubject { background-color: #eeee33;}
         span.object { background-color: #ff6666;}
         span.legaleffect { background-color: #00ffff;}
         span.term { background-color: #c0c0c0}
@@ -127,7 +127,40 @@
       </style>
     </head>
     <body>
-      <xsl:apply-templates select="key('item',ROOT/rdf:RDF/rdf:Description/oa:source/@rdf:resource)" mode="expression"/>
+      <h2>Voorbeelden</h2>
+      <table>
+        <tr>
+          <th>Normbepaling</th>
+          <th>Begripsbepaling</th>
+        </tr>
+        <tr>
+          <td><span class="primarysubject">Primair subject</span></td>
+          <td><span class="term">Term</span></td>
+        </tr>
+        <tr>
+          <td><span class="secondarysubject">Secundair subject</span></td>
+          <td><span class="definition">Definitie</span></td>
+        </tr>
+        <tr>
+          <td><span class="normexpression">Normuitdrukking</span></td>
+          <td />
+        </tr>
+        <tr>
+          <td><span class="object">Object</span></td>
+          <td />
+        </tr>
+        <tr>
+          <td><span class="condition">Conditie</span></td>
+          <td />
+        </tr>
+        <tr>
+          <td><span class="legaleffect">Juridisch effect</span></td>
+          <td />
+        </tr>
+      </table>
+      <xsl:for-each select="key('item',ROOT/rdf:RDF/rdf:Description/oa:source/@rdf:resource)"><xsl:sort select="@rdf:about"/>
+        <xsl:apply-templates select="." mode="expression"/>
+      </xsl:for-each>
     </body>
   </html>
 </xsl:template>

@@ -11,6 +11,9 @@ fi
 if [ ! -f "libs/rdf2graphml.xsl" ]; then
   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/rdf2graphml.xsl -o libs/rdf2graphml.xsl
 fi
+if [ ! -f "libs/rdf2md.xsl" ]; then
+  curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/rdf2md.xsl -o libs/rdf2md.xsl
+fi
 
 # Create temporary folder
 if [ ! -d "pipeline" ]; then
@@ -32,6 +35,12 @@ java -jar libs/rdf2rdf.jar -i pipeline/total.ttl -o pipeline/total-en.ttl -c scr
 # Create diagrams
 java -jar libs/rdf2xml.jar pipeline/total-en.ttl media/echelon0.graphml libs/rdf2graphml.xsl add media/echelon0-edited.graphml
 java -jar libs/rdf2xml.jar pipeline/total-nl.ttl media/echelon0-nl.graphml libs/rdf2graphml.xsl add media/echelon0-edited.graphml
+
+# Create respec
+java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon0.md libs/rdf2md.xsl lang=nl
+
+# Create Respec
+npx respec -s ./media/index.html -o ./dist/index.html --localhost
 
 # Flush pipeline
 rm -f pipeline/*.*

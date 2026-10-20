@@ -1,0 +1,59 @@
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lomo: <http://data.europa.eu/leg/lomo#>
+
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+
+PREFIX rule: <http://bp4mc2.org/legalgrammar/examples/rules/>
+PREFIX begrip: <http://bp4mc2.org/legalgrammar/examples/concepts/>
+PREFIX handeling: <http://bp4mc2.org/legalgrammar/examples/actions/>
+
+rule:VerlenenIndividueleInkomenstoeslag a lomo:InstitutionalRule;
+  lg:empowers action:VerlenenIndividueleInkomenstoeslag;
+  lg:object begrip:IndividueleInkomenstoeslag;
+  lg:primarySubject begrip:CollegeVanBurgemeesterEnWethouders;
+  lg:secundarySubject begrip:BelanghebbendeVanBijstand;
+  # Recht op individuele inkomenstoeslag is op zich wel een begrip, maar wat raar om ook nog afzonderlijk te introduceren als begrip
+  # Wellicht nog wel de plicht tot uitbetalen? Maar dat volgt mogelijk niet uit de originele norm...
+  lg:condition [
+    lg:conditionList (
+      [lg:condition "Belanghebbende van bijstand heeft aanvraag individuele inkomenstoeslag gedaan"; lg:references begrip:BelanghebbendeVanBijstand; lg:references begrip:AanvraagIndividueleInkomenstoeslag]
+      [lg:condition "Belanghebbende van bijstand is 21 jaar of ouder"; lg:references begrip:BelanghebbendeVanBijstand]
+      [lg:condition "Belanghebbende van bijstand is jonger dan dan de pensioengerechtigde leeftijd", lg:references begrip:BelanghebbendeVanBijstand, begrip:PensioengerechtigdeLeeftijd]
+      [lg:condition "Belanghebbende heeft langdurig een laag inkomen"; lg:references begrip:BelanghebbendeVanBijstand, lg:references begrip:LangdurigLaagInkomen]
+      [lg:condition "Belanghebbende heeft geen in aanmerking te nemen vermogen als bedoeld in artikel 34"; lg:references begrip:BelanghebbendeVanBijstand, lg:references begrip:VermogenVoorBijstand]
+    );
+    lg:operator lg:AND;
+  ]
+.
+
+begrip:IndividueleInkomenstoeslag a skos:Concept;
+  rdfs:label "Individuele inkomenstoeslag"@nl;
+.
+
+begrip:CollegeVanBurgemeesterEnWethouders a skos:Concept;
+  rdfs:label "College van burgemeester en wethouders"@nl;
+.
+
+begrip:BelanghebbendeVanBijstand a skos:Concept;
+  rdfs:label "Belanghebbende van bijstand"@nl;
+  skos:definition "Een belanghebbende van bijstand is een natuurlijk persoon die belang heeft op bijstand"@nl;
+.
+
+begrip:PensioengerechtigdeLeeftijd a skos:Concept;
+  rdfs:label "Pensioengerechtigde leeftijd"@nl;
+.
+
+begrip:LangdurigLaagInkomen a skos:Concept;
+  rdfs:label "Langdurig laag inkomen"@nl;
+  skos:definition "Langdurig laag inkomen is inkomen dat door het bevoegd gezag als langdurig en laag wordt beoordeeld"@nl;
+.
+
+begrip:VermogenVoorBijstand a skos:Concept;
+  rdfs:label "Vermogen voor bijstand"@nl;
+  skos:definition "Vermogen voor bijstand is vermogen voor zover dit vermogen in aanmerking wordt genomen bij de verlening van bijstand"@nl;
+.

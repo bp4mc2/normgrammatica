@@ -12,4 +12,4 @@ if [ ! -d "dist" ]; then
 fi
 
 # Convert BWB turtle to html
-java -jar libs/rdf2xml.jar examples/BWBR0015703.ttl dist/BWBR0015703.html scripts/bwb2html.xsl
+java -jar libs/rdf2xml.jar examples/BWBR0015703.ttl media/BWBR0015703.html scripts/bwb2html.xsl
