@@ -23,4 +23,4 @@ cp examples/echelon0.ttl pipeline
 java -jar libs/rdf2rdf.jar -p pipeline -i "*.ttl" -o pipeline/total.ttl
 
 # Convert BWB turtle to html
-java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon0.html scripts/oa2html.xsl
+java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon0-example.html scripts/oa2html.xsl

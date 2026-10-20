@@ -40,7 +40,7 @@ java -jar libs/rdf2xml.jar pipeline/total-nl.ttl media/echelon0-nl.graphml libs/
 java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon0.md libs/rdf2md.xsl lang=nl
 
 # Create Respec
-npx respec -s ./media/index.html -o ./dist/index.html --localhost
+npx respec -s ./media/echelon0-index.html -o ./dist/index.html --localhost
 
 # Flush pipeline
 rm -f pipeline/*.*
