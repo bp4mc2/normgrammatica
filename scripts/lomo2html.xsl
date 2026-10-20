@@ -8,9 +8,70 @@
   xmlns:dct="http://purl.org/dc/terms/"
   xmlns:cnt="http://www.w3.org/2011/content#"
   xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:lg="http://bp4mc2.org/legalgrammar#"
 >
 
 <xsl:output method="html"/>
+
+<xsl:key name="item" match="/ROOT/rdf:RDF/rdf:Description" use="@rdf:about|@rdf:nodeID"/>
+
+<xsl:template match="rdf:Description" mode="label">
+  <xsl:choose>
+    <xsl:when test="skos:prefLabel!=''"><xsl:value-of select="skos:prefLabel"/></xsl:when>
+    <xsl:when test="rdfs:label!=''"><xsl:value-of select="rdfs:label"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="@rdf:about"/></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="rdf:Description[rdf:type/@rdf:resource='http://data.europa.eu/leg/lomo#InstitutionalRule']" mode="parse">
+  <h3><xsl:apply-templates select="." mode="label"/> (regel)</h3>
+  <table>
+    <tr>
+      <th>Type</th>
+      <td>
+        <xsl:choose>
+          <xsl:when test="exists(lg:empowers)">Bevoegdheidsregel</xsl:when>
+          <xsl:when test="exists(lg:legalEffect)">Van-rechtwege-regel</xsl:when>
+          <xsl:otherwise>Institutionele regel</xsl:otherwise>
+        </xsl:choose>
+      </td>
+    </tr>
+    <xsl:if test="exists(key('item',lg:empowers/@rdf:resource))">
+      <tr>
+        <th>Bevoegdheid tot</th>
+        <td><xsl:apply-templates select="key('item',lg:empowers/@rdf:resource)" mode="label"/></td>
+      </tr>
+    </xsl:if>
+    <xsl:if test="exists(key('item',lg:primarySubject/@rdf:resource))">
+      <tr>
+        <th>Door</th>
+        <td><xsl:apply-templates select="key('item',lg:primarySubject/@rdf:resource)" mode="label"/></td>
+      </tr>
+    </xsl:if>
+    <xsl:if test="exists(key('item',lg:secondarySubject/@rdf:resource))">
+      <tr>
+        <th>Jegens</th>
+        <td><xsl:apply-templates select="key('item',lg:secondarySubject/@rdf:resource)" mode="label"/></td>
+      </tr>
+    </xsl:if>
+    <xsl:if test="exists(key('item',lg:object/@rdf:resource))">
+      <tr>
+        <th>Betreft</th>
+        <td><xsl:apply-templates select="key('item',lg:object/@rdf:resource)" mode="label"/></td>
+      </tr>
+    </xsl:if>
+  </table>
+</xsl:template>
+
+<xsl:template match="rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2004/02/skos/core#Concept']" mode="parse">
+  <h3><xsl:apply-templates select="." mode="label"/> (begrip)</h3>
+</xsl:template>
+
+<!-- Failsafe -->
+<xsl:template match="rdf:Description" mode="parse">
+  <!--<h6>TODO: <xsl:value-of select="@rdf:about"/> (<xsl:value-of select="rdf:type/@rdf:resource"/>)</h6>-->
+</xsl:template>
 
 <xsl:template match="/">
   <html>
@@ -44,38 +105,8 @@
     </head>
     <body>
       <h2>Voorbeelden</h2>
-      <table>
-        <tr>
-          <th>Normbepaling</th>
-          <th>Begripsbepaling</th>
-        </tr>
-        <tr>
-          <td><span class="primarysubject">Primair subject</span></td>
-          <td><span class="term">Term</span></td>
-        </tr>
-        <tr>
-          <td><span class="secondarysubject">Secundair subject</span></td>
-          <td><span class="definition">Definitie</span></td>
-        </tr>
-        <tr>
-          <td><span class="normexpression">Normuitdrukking</span></td>
-          <td />
-        </tr>
-        <tr>
-          <td><span class="object">Object</span></td>
-          <td />
-        </tr>
-        <tr>
-          <td><span class="condition">Conditie</span></td>
-          <td />
-        </tr>
-        <tr>
-          <td><span class="legaleffect">Juridisch effect</span></td>
-          <td />
-        </tr>
-      </table>
-      <xsl:for-each select="key('item',ROOT/rdf:RDF/rdf:Description/oa:source/@rdf:resource)"><xsl:sort select="@rdf:about"/>
-        <xsl:apply-templates select="." mode="expression"/>
+      <xsl:for-each select="ROOT/rdf:RDF/rdf:Description[exists(rdf:type) and @rdf:about!='']"><xsl:sort select="@rdf:about"/>
+        <xsl:apply-templates select="." mode="parse"/>
       </xsl:for-each>
     </body>
   </html>

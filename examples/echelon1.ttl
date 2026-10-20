@@ -6,29 +6,34 @@ PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX lomo: <http://data.europa.eu/leg/lomo#>
 
-PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+PREFIX lg: <http://bp4mc2.org/legalgrammar#>
 
-PREFIX rule: <http://bp4mc2.org/legalgrammar/examples/rules/>
+PREFIX regel: <http://bp4mc2.org/legalgrammar/examples/rules/>
 PREFIX begrip: <http://bp4mc2.org/legalgrammar/examples/concepts/>
 PREFIX handeling: <http://bp4mc2.org/legalgrammar/examples/actions/>
 
-rule:VerlenenIndividueleInkomenstoeslag a lomo:InstitutionalRule;
-  lg:empowers action:VerlenenIndividueleInkomenstoeslag;
+regel:VerlenenIndividueleInkomenstoeslag a lomo:InstitutionalRule;
+  rdfs:label "Verlenen individuele inkomenstoeslag"@nl;
+  lg:empowers handeling:VerlenenIndividueleInkomenstoeslag;
   lg:object begrip:IndividueleInkomenstoeslag;
   lg:primarySubject begrip:CollegeVanBurgemeesterEnWethouders;
-  lg:secundarySubject begrip:BelanghebbendeVanBijstand;
+  lg:secondarySubject begrip:BelanghebbendeVanBijstand;
   # Recht op individuele inkomenstoeslag is op zich wel een begrip, maar wat raar om ook nog afzonderlijk te introduceren als begrip
   # Wellicht nog wel de plicht tot uitbetalen? Maar dat volgt mogelijk niet uit de originele norm...
   lg:condition [
     lg:conditionList (
       [lg:condition "Belanghebbende van bijstand heeft aanvraag individuele inkomenstoeslag gedaan"; lg:references begrip:BelanghebbendeVanBijstand; lg:references begrip:AanvraagIndividueleInkomenstoeslag]
       [lg:condition "Belanghebbende van bijstand is 21 jaar of ouder"; lg:references begrip:BelanghebbendeVanBijstand]
-      [lg:condition "Belanghebbende van bijstand is jonger dan dan de pensioengerechtigde leeftijd", lg:references begrip:BelanghebbendeVanBijstand, begrip:PensioengerechtigdeLeeftijd]
-      [lg:condition "Belanghebbende heeft langdurig een laag inkomen"; lg:references begrip:BelanghebbendeVanBijstand, lg:references begrip:LangdurigLaagInkomen]
-      [lg:condition "Belanghebbende heeft geen in aanmerking te nemen vermogen als bedoeld in artikel 34"; lg:references begrip:BelanghebbendeVanBijstand, lg:references begrip:VermogenVoorBijstand]
+      [lg:condition "Belanghebbende van bijstand is jonger dan dan de pensioengerechtigde leeftijd"; lg:references begrip:BelanghebbendeVanBijstand, begrip:PensioengerechtigdeLeeftijd]
+      [lg:condition "Belanghebbende heeft langdurig een laag inkomen"; lg:references begrip:BelanghebbendeVanBijstand; lg:references begrip:LangdurigLaagInkomen]
+      [lg:condition "Belanghebbende heeft geen in aanmerking te nemen vermogen als bedoeld in artikel 34"; lg:references begrip:BelanghebbendeVanBijstand; lg:references begrip:VermogenVoorBijstand]
     );
     lg:operator lg:AND;
   ]
+.
+
+handeling:VerlenenIndividueleInkomenstoeslag a lomo:Action;
+  rdfs:label "Verlenen individuele inkomenstoeslag";
 .
 
 begrip:IndividueleInkomenstoeslag a skos:Concept;
