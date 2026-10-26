@@ -25,15 +25,15 @@
 </xsl:template>
 
 <xsl:template match="rdf:Description[rdf:type/@rdf:resource='http://data.europa.eu/leg/lomo#InstitutionalRule']" mode="parse">
-  <h3><xsl:apply-templates select="." mode="label"/> (regel)</h3>
+  <h3><xsl:apply-templates select="." mode="label"/> (norm)</h3>
   <table>
     <tr>
       <th>Type</th>
       <td>
         <xsl:choose>
-          <xsl:when test="exists(lg:empowers)">Bevoegdheidsregel</xsl:when>
-          <xsl:when test="exists(lg:legalEffect)">Van-rechtwege-regel</xsl:when>
-          <xsl:otherwise>Institutionele regel</xsl:otherwise>
+          <xsl:when test="exists(lg:empowers)">Bevoegdheidsnorm</xsl:when>
+          <xsl:when test="exists(lg:legalEffect)">Van-rechtwege-norm</xsl:when>
+          <xsl:otherwise>Institutionele norm</xsl:otherwise>
         </xsl:choose>
       </td>
     </tr>
