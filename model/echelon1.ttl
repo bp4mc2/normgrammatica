@@ -35,7 +35,7 @@ echelon0:Expression a sh:NodeShape;
 echelon1:LegalRule a sh:NodeShape;
   sh:targetClass lomo:LegalRule;
   sh:name "lomo:LegalRule";
-  rdfs:label "Juridische regel"@nl;
+  rdfs:label "Juridische norm"@nl;
   rdfs:label "Legal rule"@en;
   sh:property echelon1:LegalRule.establishedIn;
   sh:property echelon1:LegalRule.condition;
@@ -59,7 +59,7 @@ echelon1:LegalRule.condition a sh:PropertyShape;
 echelon1:ConstitutiveRule a sh:NodeShape;
   sh:targetClass lomo:ConstitutiveRule;
   sh:name "lomo:ConstitutiveRule";
-  rdfs:label "Constitutieve regel"@nl;
+  rdfs:label "Constitutieve norm"@nl;
   rdfs:label "Constitutive rule"@en;
 .
 
@@ -75,12 +75,12 @@ echelon1:ConstitutiveRule a sh:NodeShape;
 # - Een prescriptieve regel: deze normeert gedrag en (kan) rechtsgevolgen hebben.
 
 #
-# Norm
+# (Voorschrijvende) norm
 #
 echelon1:PrescriptiveRule a sh:NodeShape;
   sh:targetClass lomo:PrescriptiveRule;
   sh:name "lomo:PrescriptiveRule";
-  rdfs:label "Voorschrijvende regel"@nl;
+  rdfs:label "Voorschrijvende norm"@nl;
   rdfs:label "Prescriptive rule"@en;
   sh:property echelon1:PrescriptiveRule.produces;
   sh:property echelon1:LegalRule.primarySubject;
@@ -224,7 +224,7 @@ echelon1:InstitutionalRule a sh:NodeShape;
   sh:targetClass lomo:InstitutionalRule;
   sh:name "lomo:InstitutionalRule";
   rdfs:label "Institutional rule"@en;
-  rdfs:label "Institutionele regel"@nl;
+  rdfs:label "Institutionele norm"@nl;
   sh:property echelon1:InstitutionalRule.empowers;
   sh:property echelon1:LegalRule.primarySubject;
   sh:property echelon1:LegalRule.secondarySubject;

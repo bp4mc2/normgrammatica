@@ -44,7 +44,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Institutionele regel</y:NodeLabel>
+                            y="4.0">Institutionele norm</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -104,7 +104,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Juridische regel</y:NodeLabel>
+                            y="4.0">Juridische norm</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -344,7 +344,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Voorschrijvende regel</y:NodeLabel>
+                            y="4.0">Voorschrijvende norm</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -464,7 +464,7 @@
                             visible="true"
                             width="44.25390625"
                             x="17.873046875"
-                            y="4.0">Constitutieve regel</y:NodeLabel>
+                            y="4.0">Constitutieve norm</y:NodeLabel>
                <y:NodeLabel alignment="left" autoSizePolicy="content"
                             configuration="com.yworks.entityRelationship.label.attributes"
                             fontFamily="Dialog"
@@ -556,7 +556,16 @@
          <data key="d3">http://bp4mc2.org/def/echelon1#CompountConditionOperator</data>
          <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-               <y:Geometry height="90.0" width="80.0" x="637.0" y="277.0"/>
+               <y:Geometry xmlns="http://graphml.graphdrawing.org/xmlns"
+                           xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                           xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                           xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xmlns:yed="http://www.yworks.com/xml/yed/3"
+                           height="90.0"
+                           width="80.0"
+                           x="1351.0"
+                           y="-0.63968798091895"/>
                <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
                <y:BorderStyle color="#000000" type="line" width="1.0"/>
                <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3"
@@ -1606,7 +1615,7 @@
                             ratio="0.5"
                             textColor="#000000"
                             visible="true"
-                            x="-55.0068359375"
+                            x="-55.0771484375"
                             y="68.09303792317712">definieert [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
@@ -1638,7 +1647,25 @@
          <data key="d8">http://bp4mc2.org/def/echelon1#CompoundCondition.operator http://bp4mc2.org/legalgrammar/operator</data>
          <data key="d10">
             <y:PolyLineEdge>
-               <y:LineStyle color="#000000" type="line" width="1.0"/>
+               <y:Path xmlns="http://graphml.graphdrawing.org/xmlns"
+                       xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                       xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                       xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns:yed="http://www.yworks.com/xml/yed/3"
+                       sx="0.0"
+                       sy="0.0"
+                       tx="0.0"
+                       ty="0.0"/>
+               <y:LineStyle xmlns="http://graphml.graphdrawing.org/xmlns"
+                            xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                            xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                            xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:yed="http://www.yworks.com/xml/yed/3"
+                            color="#000000"
+                            type="line"
+                            width="1.0"/>
                <y:Arrows source="none" target="standard"/>
                <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel"
                             distance="2.0"
@@ -1650,10 +1677,17 @@
                             preferredPlacement="anywhere"
                             ratio="0.5"
                             textColor="#000000"
-                            visible="true">operator [1,1]<y:LabelModel>
+                            visible="true"
+                            x="-49.619140625"
+                            y="-42.08690782955176">operator [1,1]<y:LabelModel>
                      <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
                   </y:LabelModel>
-                  <y:ModelParameter>
+                  <y:ModelParameter xmlns="http://graphml.graphdrawing.org/xmlns"
+                                    xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java"
+                                    xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0"
+                                    xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    xmlns:yed="http://www.yworks.com/xml/yed/3">
                      <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center"
                                                      ratio="0.5"
                                                      segment="0"/>
