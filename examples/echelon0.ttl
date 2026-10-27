@@ -101,3 +101,21 @@ annotatie:Artikel5subdPw.Definition a oa:Annotation;
   ];
   oa:body lg:Definition
 .
+
+#
+# Begrip "college"
+#
+annotatie:Artikel1subbPw.Term a oa:Annotation;
+  oa:target [
+  oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=b&z=2026-07-01&g=2026-07-01>;
+  oa:selector [oa:start 1; oa:end 7]
+  ];
+  oa:body lg:Term
+.
+annotatie:Artikel1subbPw.Definition a oa:Annotation;
+  oa:target [
+  oa:source <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=b&z=2026-07-01&g=2026-07-01>;
+  oa:selector [oa:start 10; oa:end 86]
+  ];
+  oa:body lg:Definition
+.
