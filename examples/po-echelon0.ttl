@@ -1,0 +1,67 @@
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+
+PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/annotations/>
+
+#
+# Norm uit Artikel 45a, lid 1
+#
+annotatie:Artikel45alid1Vw2000.PrimarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 13]
+  ];
+  oa:body lg:PrimarySubject
+.
+annotatie:Artikel45alid1Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 15; oa:end 24], [oa:start 114; oa:end 127], [oa:start 130; oa:end 141], [oa:start 151; oa:end 178], [oa:start 235; oa:end 247]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid1Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 26; oa:end 112]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel45alid1Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 180; oa:end 233]
+  ];
+  oa:body lg:Object
+.
+
+#
+# Norm uit Artikel 46d, lid 1
+#
+annotatie:Artikel46dlid1Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 52]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel46dlid1Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 54; oa:end 75]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid1Vw2000.Condition a oa:Annotation;
+  oa:target [
+  oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 85; oa:end 264], [oa:start 265; oa:end 369]
+  ];
+  oa:body lg:Condition
+.

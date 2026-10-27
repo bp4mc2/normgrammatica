@@ -23,30 +23,40 @@
 <xsl:variable name="eli-Work"><xsl:value-of select="$eli"/>Work</xsl:variable>
 
 <xsl:template match="rdf:Description" mode="chars">
+  <xsl:param name="target"/>
+  <xsl:param name="index"/>
+
   <xsl:variable name="chars"><xsl:value-of select="cnt:chars"/></xsl:variable>
   <xsl:variable name="anno">
-    <xsl:for-each select="key('item',key('target',@rdf:about)/oa:selector/@rdf:nodeID)"><xsl:sort select="oa:start" data-type="number"/>
+    <xsl:for-each select="key('item',key('target',$target)/oa:selector/@rdf:nodeID)"><xsl:sort select="oa:start" data-type="number"/>
       <xsl:variable name="class"><xsl:value-of select="key('annotation',key('seltarget',@rdf:nodeID)/@rdf:nodeID)/oa:body/@rdf:resource"/></xsl:variable>
-      <part start="{oa:start}" end="{oa:end}" class="{lower-case(substring-after($class,'legalgrammar/'))}"/>
+      <xsl:if test="oa:start >= $index">
+        <part start="{oa:start - $index}" end="{oa:end - $index}" class="{lower-case(substring-after($class,'legalgrammar/'))}"/>
+      </xsl:if>
     </xsl:for-each>
   </xsl:variable>
-  <xsl:for-each select="$anno/part">
-    <xsl:choose>
-      <xsl:when test="position()=1">
-        <xsl:if test="@start>1"><xsl:value-of select="substring($chars,1,@start - 1)"/></xsl:if>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:variable name="pos" select="position() - 1"/>
-        <xsl:variable name="pend" select="$anno/part[$pos]/@end"/>
-        <xsl:if test="(@start - $pend) > 1"><xsl:value-of select="substring($chars,1+$pend,@start - $pend - 1)"/></xsl:if>
-      </xsl:otherwise>
-    </xsl:choose>
-    <span class="{@class}"><xsl:value-of select="substring($chars,@start,1 + @end - @start)"/></span>
-  </xsl:for-each>
-  <xsl:variable name="pend" select="$anno/part[last()]/@end"/>
-  <xsl:if test="(string-length($chars) - $pend) > 1">
-    <xsl:value-of select="substring($chars,1 + $pend,string-length($chars) - $pend - 1)"/>
-  </xsl:if>
+  <xsl:choose>
+    <xsl:when test="count($anno/part)=0"><xsl:value-of select="$chars"/></xsl:when>
+    <xsl:otherwise>
+      <xsl:for-each select="$anno/part">
+        <xsl:choose>
+          <xsl:when test="position()=1">
+            <xsl:if test="@start>1"><xsl:value-of select="substring($chars,1,@start - 1)"/></xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="pos" select="position() - 1"/>
+            <xsl:variable name="pend" select="$anno/part[$pos]/@end"/>
+            <xsl:if test="(@start - $pend) > 1"><xsl:value-of select="substring($chars,1+$pend,@start - $pend - 1)"/></xsl:if>
+          </xsl:otherwise>
+        </xsl:choose>
+        <span class="{@class}"><xsl:value-of select="substring($chars,@start,1 + @end - @start)"/></span>
+      </xsl:for-each>
+      <xsl:variable name="pend" select="$anno/part[last()]/@end"/>
+      <xsl:if test="(string-length($chars) - $pend) > 0">
+        <xsl:value-of select="substring($chars,1 + $pend,string-length($chars) - $pend)"/>
+      </xsl:if>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="rdf:Description" mode="title">
@@ -61,35 +71,66 @@
 </xsl:template>
 
 <xsl:template match="rdf:Description" mode="expression">
+  <xsl:param name="target"/>
+  <xsl:param name="index" select="0"/>
 
   <h3><xsl:apply-templates select="." mode="title"/></h3>
-  <xsl:if test="exists(cnt:chars)"><p><xsl:apply-templates select="." mode="chars"/></p></xsl:if>
-  <xsl:for-each select="key('expression',key('part',key('item',eli:realizes/@rdf:resource)/@rdf:about)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
+  <xsl:if test="exists(cnt:chars)">
+    <p><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
+  </xsl:if>
+  <xsl:variable name="nextindex" select="$index + string-length(cnt:chars) + 1"/>
+  <xsl:variable name="workuri" select="key('item',eli:realizes/@rdf:resource)/@rdf:about"/>
+  <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
+    <!-- Calculating offset (DOESNT WORK WITH SUBITEMS)-->
+    <xsl:variable name="position" select="schema:position"/>
+    <xsl:variable name="siblings">
+      <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)[$position > schema:position]">
+        <offset><xsl:value-of select="string-length(cnt:chars) + 1"/></offset>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="offset" select="sum($siblings/offset)"/>
+    <!-- Until -->
     <xsl:choose>
       <xsl:when test="exists(eli:number)">
         <ul>
-          <xsl:apply-templates select="." mode="listitem"/>
+          <xsl:apply-templates select="." mode="listitem">
+            <xsl:with-param name="target" select="$target"/>
+            <xsl:with-param name="index" select="$nextindex + $offset"/>
+          </xsl:apply-templates>
         </ul>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:apply-templates select="." mode="expression"/>
+        <xsl:apply-templates select="." mode="expression">
+          <xsl:with-param name="target" select="$target"/>
+          <xsl:with-param name="index" select="$nextindex + $offset"/>
+        </xsl:apply-templates>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:for-each>
 </xsl:template>
 
 <xsl:template match="rdf:Description" mode="listitem">
+  <xsl:param name="target"/>
+  <xsl:param name="index" select="0"/>
+
   <li>
-    <p><span><xsl:value-of select="eli:number"/></span><xsl:apply-templates select="." mode="chars"/></p>
+    <p><span><xsl:value-of select="eli:number"/></span><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
+    <xsl:variable name="nextindex" select="$index + string-length(cnt:chars)"/>
     <xsl:for-each select="key('expression',key('part',key('item',eli:realizes/@rdf:resource)/@rdf:about)/@rdf:about)"><xsl:sort select="schema:position[1]" data-type="number"/>
       <xsl:choose>
         <xsl:when test="exists(eli:number)">
           <ul>
-            <xsl:apply-templates select="." mode="listitem"/>
+            <xsl:apply-templates select="." mode="listitem">
+              <xsl:with-param name="target" select="$target"/>
+              <xsl:with-param name="index" select="$nextindex"/>
+            </xsl:apply-templates>
           </ul>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates select="." mode="expression"/>
+          <xsl:apply-templates select="." mode="expression">
+            <xsl:with-param name="target" select="$target"/>
+            <xsl:with-param name="index" select="$nextindex"/>
+          </xsl:apply-templates>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:for-each>
@@ -159,7 +200,9 @@
         </tr>
       </table>
       <xsl:for-each select="key('item',ROOT/rdf:RDF/rdf:Description/oa:source/@rdf:resource)"><xsl:sort select="@rdf:about"/>
-        <xsl:apply-templates select="." mode="expression"/>
+        <xsl:apply-templates select="." mode="expression">
+          <xsl:with-param name="target" select="@rdf:about"/>
+        </xsl:apply-templates>
       </xsl:for-each>
     </body>
   </html>
