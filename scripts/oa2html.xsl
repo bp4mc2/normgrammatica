@@ -25,6 +25,7 @@
 <xsl:template match="rdf:Description" mode="chars">
   <xsl:param name="target"/>
   <xsl:param name="index"/>
+  <!--<xsl:text>[</xsl:text><xsl:value-of select="$index"/><xsl:text>]</xsl:text>-->
 
   <xsl:variable name="chars"><xsl:value-of select="cnt:chars"/></xsl:variable>
   <xsl:variable name="anno">
@@ -75,37 +76,42 @@
   <xsl:param name="index" select="0"/>
 
   <h3><xsl:apply-templates select="." mode="title"/></h3>
-  <xsl:if test="exists(cnt:chars)">
-    <p><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
-  </xsl:if>
-  <xsl:variable name="nextindex" select="$index + string-length(cnt:chars) + 1"/>
-  <xsl:variable name="workuri" select="key('item',eli:realizes/@rdf:resource)/@rdf:about"/>
-  <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
-    <!-- Calculating offset (DOESNT WORK WITH SUBITEMS)-->
-    <xsl:variable name="position" select="schema:position"/>
-    <xsl:variable name="siblings">
-      <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)[$position > schema:position]">
-        <offset><xsl:value-of select="string-length(cnt:chars) + 1"/></offset>
-      </xsl:for-each>
-    </xsl:variable>
-    <xsl:variable name="offset" select="sum($siblings/offset)"/>
-    <!-- Until -->
-    <xsl:choose>
-      <xsl:when test="exists(eli:number)">
-        <ul>
-          <xsl:apply-templates select="." mode="listitem">
+  <div class="legislation">
+    <xsl:if test="exists(cnt:chars)">
+      <p><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
+    </xsl:if>
+    <xsl:variable name="nextindex" select="$index + string-length(cnt:chars) + 1"/>
+    <xsl:variable name="workuri" select="key('item',eli:realizes/@rdf:resource)/@rdf:about"/>
+    <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
+      <!-- Calculating offset (DOESNT WORK WITH SUBITEMS)-->
+      <xsl:variable name="position" select="schema:position"/>
+      <xsl:variable name="siblings">
+        <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)[$position > schema:position]">
+          <offset><xsl:value-of select="string-length(cnt:chars) + 1"/></offset>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:variable name="offset" select="sum($siblings/offset)"/>
+      <!-- Until -->
+      <xsl:choose>
+        <xsl:when test="exists(eli:number)">
+          <ul>
+            <xsl:apply-templates select="." mode="listitem">
+              <xsl:with-param name="target" select="$target"/>
+              <xsl:with-param name="index" select="$nextindex + $offset"/>
+            </xsl:apply-templates>
+          </ul>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="." mode="expression">
             <xsl:with-param name="target" select="$target"/>
             <xsl:with-param name="index" select="$nextindex + $offset"/>
           </xsl:apply-templates>
-        </ul>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="." mode="expression">
-          <xsl:with-param name="target" select="$target"/>
-          <xsl:with-param name="index" select="$nextindex + $offset"/>
-        </xsl:apply-templates>
-      </xsl:otherwise>
-    </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </div>
+  <xsl:for-each select="key('annotation',key('target',$target)[not(exists(oa:selector))]/@rdf:nodeID)[oa:body!='']">
+    <p><xsl:value-of select="oa:body"/></p>
   </xsl:for-each>
 </xsl:template>
 

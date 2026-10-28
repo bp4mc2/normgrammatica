@@ -19,6 +19,7 @@ fi
 # Clean, copy and merge
 rm -f pipeline/*.*
 cp examples/BWBR0011823.ttl pipeline
+cp examples/BWBR0011825.ttl pipeline
 cp examples/po-echelon0.ttl pipeline
 java -jar libs/rdf2rdf.jar -p pipeline -i "*.ttl" -o pipeline/total.ttl
 

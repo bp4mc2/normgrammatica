@@ -12,6 +12,12 @@ PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/annotations/>
 #
 # Norm uit Artikel 45a, lid 1
 #
+annotatie:Artikel45alid1Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "Dit lijkt de kern te zijn: de feitelijke bevoegdheid die aan Onze Minister wordt verleend. Maar is hier nu sprake van één normuitdrukking of meerdere? Ik zou zeggen, het is er maar eentje, want anders moet je 'is bevoegd' steeds herhalen. Wel lijkt het mij dat hier sprake is van vier normen op het semantische niveau: (1) bevoegdheid tot inwilligen; (2) bevoegdheid tot afwijzen; (3) bevoegdheid tot niet in behandeling te nemen; (4) bevoegdheid tot intrekken.";
+.
 annotatie:Artikel45alid1Vw2000.PrimarySubject a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=1&z=2026-10-16&g=2026-10-16>;
@@ -42,8 +48,52 @@ annotatie:Artikel45alid1Vw2000.Object a oa:Annotation;
 .
 
 #
+# Norm uit Artikel 45a, lid 2
+#
+annotatie:Artikel45alid2Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "Dit lijkt een van-rechtswege norm. Niemand 'doet' hier iets, er is al wat gedaan... 'De status van langdurig ingezetene' lijkt een juridisch effect, niet enkel een object. Als je hier een object van maakt, wat is dan nog WEL een juridisch effect? Dat die status permanent is, lijkt me dan ook een juridisch effect. De verlening lijkt me in dit geval de conditie waaronder deze norm 'actief' wordt."
+.
+annotatie:Artikel45alid2Vw2000.LegalEffect a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 34]
+  ];
+  oa:body lg:LegalEffect
+.
+annotatie:Artikel45alid2Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 36; oa:end 50]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid2Vw2000.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 57; oa:end 126]
+  ];
+  oa:body lg:Condition
+.
+annotatie:Artikel45alid2Vw2000.LegalEffect a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 129; oa:end 201]
+  ];
+  oa:body lg:LegalEffect
+.
+
+#
 # Norm uit Artikel 46d, lid 1
 #
+annotatie:Artikel46dlid1Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "De vraag is of hier -zelfstandig- ook een bevoegdheid wordt gemaakt. Het lijkt vooral condities te beschrijven waaronder de bevoegdheid kan worden uitgevoerd. In die zin is het aanvullend aan de norm uit Artikel 45a lid 1";
+.
 annotatie:Artikel46dlid1Vw2000.Object a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
@@ -62,6 +112,130 @@ annotatie:Artikel45alid1Vw2000.Condition a oa:Annotation;
   oa:target [
   oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=1&z=2026-10-16&g=2026-10-16>;
     oa:selector [oa:start 85; oa:end 264], [oa:start 265; oa:end 369]
+  ];
+  oa:body lg:Condition
+.
+
+#
+# Norm uit Artikel 46d, lid 2
+#
+annotatie:Artikel46dlid2Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=2&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "Hier lijkt sprake te zijn van een speciaal soort object. Het is niet zomaar een EU-verblijfsvergunning, maar een hele specifieke. Vandaar om dat specifiekere deel niet een conditie te maken.";
+.
+annotatie:Artikel46dlid2Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 177]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel46dlid2Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 180; oa:end 201]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid2Vw2000.Condition a oa:Annotation;
+  oa:target [
+  oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 212; oa:end 482], [oa:start 488; oa:end 697]
+  ];
+  oa:body lg:Condition
+.
+
+#
+# Norm uit Artikel 46d, lid 3
+#
+annotatie:Artikel46dlid3Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=3&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "Net als bij lid 1 lijkt hier geen sprake van een afzonderlijke norm. Maar wel geldt dat de modaliteit in dit geval 'moeten' is. Dus als we maar 1 modaliteit toestaan, dan hebben we hier wel twee normen pakken (op semantisch niveau). Ze zijn bijna gelijk aan elkaar, maar verschillen in de modaliteit en de condities";
+.
+annotatie:Artikel46dlid3Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=3&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 52]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel46dlid3Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=3&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 54; oa:end 70]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid3Vw2000.Condition a oa:Annotation;
+  oa:target [
+  oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=3&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 81; oa:end 171], [oa:start 177; oa:end 232]
+  ];
+  oa:body lg:Condition
+.
+
+#
+# Norm uit Artikel 46d, lid 4
+#
+annotatie:Artikel46dlid4Vw2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=4&z=2026-10-16&g=2026-10-16>;
+  ];
+  oa:body "Dit lijkt een 'normale' normbepaling. Wat hier bijzonder aan is, is dat het object zelf regels zijn. Voor de semantische duiding is dat wel van belang.";
+.
+annotatie:Artikel46dlid4Vw2000.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=4&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 1; oa:end 47]
+  ];
+  oa:body lg:Condition
+.
+annotatie:Artikel46dlid4Vw2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=4&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 49; oa:end 83]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel46dlid4Vw2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45d&lid=4&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 104; oa:end 138]
+  ];
+  oa:body lg:Object
+.
+
+#
+# Norm uit Artikel 3.127, lid 1 Vb2000
+#
+annotatie:Artikel3.127lid1Vb2000 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=6&paragraaf=2&artikel=3.127&lid=1&z=2026-09-25&g=2026-09-25>;
+  ];
+  oa:body "Deze bepaling uit het Vreemdelingenbesluit is het resultaat van het toepassen van Artikel 46d lid 4. 'Met toepassing van...' lijkt een conditie die bepaalt wanneer deze regel geldt. Hiermee ontstaat weer nieuwe condities, of eigenlijk uitzonderingen op eerdere condities";
+.
+annotatie:Artikel3.127lid1Vb2000.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=6&paragraaf=2&artikel=3.127&lid=1&z=2026-09-25&g=2026-09-25>;
+    oa:selector [oa:start 1; oa:end 52]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel3.127lid1Vb2000.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=6&paragraaf=2&artikel=3.127&lid=1&z=2026-09-25&g=2026-09-25>;
+    oa:selector [oa:start 54; oa:end 63], [oa:start 129; oa:end 139]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel3.127lid1Vb2000.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=6&paragraaf=2&artikel=3.127&lid=1&z=2026-09-25&g=2026-09-25>;
+    oa:selector [oa:start 65; oa:end 127], [oa:start 149; oa:end 162], [oa:start 164; oa:end 220], [oa:start 222; oa:end 324], [oa:start 329; oa:end 619], [oa:start 621; oa:end 855]
   ];
   oa:body lg:Condition
 .
