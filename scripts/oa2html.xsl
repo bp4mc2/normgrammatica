@@ -10,7 +10,7 @@
   xmlns:oa="http://www.w3.org/ns/oa#"
 >
 
-<xsl:output method="html"/>
+<xsl:output method="html" indent="no"/>
 
 <xsl:key name="part" match="/ROOT/rdf:RDF/rdf:Description" use="dct:isPartOf/@rdf:resource"/>
 <xsl:key name="expression" match="/ROOT/rdf:RDF/rdf:Description" use="eli:realizes/@rdf:resource"/>
@@ -172,6 +172,7 @@
             font-weight: bold;
         }
       </style>
+      <!--<script src="annotator.js"></script>-->
     </head>
     <body>
       <h2>Voorbeelden</h2>
