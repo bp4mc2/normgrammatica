@@ -37,7 +37,18 @@ java -jar libs/rdf2xml.jar pipeline/total-en.ttl media/echelon0.graphml libs/rdf
 java -jar libs/rdf2xml.jar pipeline/total-nl.ttl media/echelon0-nl.graphml libs/rdf2graphml.xsl add media/echelon0-edited.graphml
 
 # Create respec
-java -jar libs/rdf2xml.jar pipeline/total.ttl media/echelon0.md libs/rdf2md.xsl lang=nl
+java -jar libs/rdf2xml.jar pipeline/total.ttl pipeline/echelon0.md libs/rdf2md.xsl lang=nl
+
+# Invoegen tekst en plaatjes toepassingsprofiel
+{
+    while IFS= read -r line; do
+        if [[ "$line" == *"![](profiel.svg \"profiel\")"* ]]; then
+            cat media/toepassingsprofiel0.md
+        else
+            echo "$line"
+        fi
+    done < pipeline/echelon0.md
+} > media/echelon0.md
 
 # Create Respec
 npx respec -s ./media/echelon0-index.html -o ./dist/index.html --localhost

@@ -4,6 +4,7 @@
 
 ![](echelon0.svg "gebruikte vocabulaires voor het tekstueel echelon")
 
+
 ## Klassen
 
 ### eli:Expression {#TExpression}
@@ -97,3 +98,4 @@ The substance of Work is ideas.|
 |Object||
 |Definitie||
 |Secundair subject||
+

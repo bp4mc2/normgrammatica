@@ -1,3 +1,4 @@
+
 Het semantisch echelon is sterk gerelateerd aan het tekstuele echelon. Het gaat in het semantisch echelon om het duiden van de betekenis van de tekstfragmenten zoals ze aanwezig zijn in het tekstuele echelon en zijn ontleedt met het juridisch grammatica. Conceptueel kan dit op de volgende manier worden weergeven.
 
 ![](echelon1-intro.svg "conceptueel model semantisch echelon")

@@ -19,6 +19,7 @@ Dit logische model laat zich op de volgende wijze uitdrukken met gebruik van de 
 
 ![](echelon1.svg "gebruikte vocabulaires voor het semantisch echelon")
 
+
 ## Klassen
 
 ### eli:Expression {#TExpression}
@@ -143,3 +144,4 @@ Dit logische model laat zich op de volgende wijze uitdrukken met gebruik van de 
 |------|------------|
 |OF||
 |EN||
+
