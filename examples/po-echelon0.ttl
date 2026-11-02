@@ -122,10 +122,17 @@ annotatie:Artikel2rlid2Vw2000-1.Object a oa:Annotation;
   ];
   oa:body lg:Object;
 .
+annotatie:Artikel2rlid2Vw2000-1.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=1&artikel=2r&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 62; oa:end 69]
+  ];
+  oa:body lg:NormExpression;
+.
 annotatie:Artikel2rlid2Vw2000-1.Condition a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=1&artikel=2r&lid=2&z=2026-10-16&g=2026-10-16>;
-    oa:selector [oa:start 62; oa:end 117]
+    oa:selector [oa:start 71; oa:end 117]
   ];
   oa:body lg:Condition;
 .
