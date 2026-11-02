@@ -22,6 +22,8 @@
 <xsl:variable name="eli">http://data.europa.eu/eli/ontology#</xsl:variable>
 <xsl:variable name="eli-Work"><xsl:value-of select="$eli"/>Work</xsl:variable>
 
+<xsl:variable name="params" select="/ROOT/@params"/>
+
 <xsl:template match="rdf:Description" mode="chars">
   <xsl:param name="target"/>
   <xsl:param name="index"/>
@@ -151,7 +153,7 @@
         span.condition { background-color: #33ff33;}
         span.normexpression { background-color: #ff66ff;}
         span.primarysubject { background-color: #ffff00;}
-        span.secondarysubject { background-color: #eeee33;}
+        span.secondarysubject { background-color: #ffc000;}
         span.object { background-color: #ff6666;}
         span.legaleffect { background-color: #00ffff;}
         span.term { background-color: #c0c0c0}
@@ -172,7 +174,9 @@
             font-weight: bold;
         }
       </style>
-      <!--<script src="annotator.js"></script>-->
+      <xsl:if test="$params='annotate'">
+        <script src="annotator.js"></script>
+      </xsl:if>
     </head>
     <body>
       <h2>Voorbeelden</h2>

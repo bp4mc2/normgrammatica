@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const types = [
     ["primarysubject", "#ffff00"],
     ["normexpression", "#ff66ff"],
-    ["secondarysubject", "#eeee33"],
+    ["secondarysubject", "#ffc000"],
     ["object", "#ff6666"],
     ["condition", "#33ff33"],
     ["legaleffect", "#00ffff"]

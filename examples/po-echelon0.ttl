@@ -113,7 +113,7 @@ annotatie:Artikel2rlid2Vw2000 a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=1&artikel=2r&lid=2&z=2026-10-16&g=2026-10-16>;
   ];
-  oa:body "Ook dit lid kent meerdere bepalingen. De eerste kent alleen een conditie. De tweede gaat over een adere norm en kent een conditie. De derde introduceert een juridisch effect. Maar deze kan ook als object worden gezien. Waarom hier een juridisch effect, en bij de andere bepalingen een object?";
+  oa:body "Ook dit lid kent meerdere bepalingen. De eerste kent alleen een conditie. De tweede gaat over een andere norm en kent een conditie. De derde introduceert een norm die betrekking heeft op tijdsverloop.";
 .
 annotatie:Artikel2rlid2Vw2000-1.Object a oa:Annotation;
   oa:target [
@@ -150,12 +150,12 @@ annotatie:Artikel2rlid2Vw2000-2.Condition a oa:Annotation;
   ];
   oa:body lg:Condition;
 .
-annotatie:Artikel2rlid2Vw2000-3.LegalEffect a oa:Annotation;
+annotatie:Artikel2rlid2Vw2000-3.Object a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=1&artikel=2r&lid=2&z=2026-10-16&g=2026-10-16>;
     oa:selector [oa:start 255; oa:end 309]
   ];
-  oa:body lg:LegalEffect;
+  oa:body lg:Object;
 .
 annotatie:Artikel2rlid2Vw2000-3.NormExpression a oa:Annotation;
   oa:target [
@@ -227,39 +227,53 @@ annotatie:Artikel45alid1Vw2000.Object a oa:Annotation;
 #
 # Norm uit Artikel 45a, lid 2
 #
-annotatie:Artikel45alid2Vw2000 a oa:Annotation;
+annotatie:Artikel45alid2Vw2000-1 a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
   ];
-  oa:body "Dit lijkt een van-rechtswege norm. Niemand 'doet' hier iets, er is al wat gedaan... 'De status van langdurig ingezetene' lijkt een juridisch effect, niet enkel een object. Als je hier een object van maakt, wat is dan nog WEL een juridisch effect? Dat die status permanent is, lijkt me dan ook een juridisch effect. De verlening lijkt me in dit geval de conditie waaronder deze norm 'actief' wordt."
+  oa:body "Dit lijkt een van-rechtswege norm. Niemand 'doet' hier iets, er is al wat gedaan... 'wordt verworven' is hier iets anders dan 'wordt verleend'. De norm gaat hier over het verwerven. De tweede volzin gaat ook over hetzelfde object. 'is permanent' is hier de normuitdrukking, de status is het object van normering."
 .
-annotatie:Artikel45alid2Vw2000.LegalEffect a oa:Annotation;
+annotatie:Artikel45alid2Vw2000-1.Object a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
     oa:selector [oa:start 1; oa:end 34]
   ];
-  oa:body lg:LegalEffect
+  oa:body lg:Object
 .
-annotatie:Artikel45alid2Vw2000.NormExpression a oa:Annotation;
+annotatie:Artikel45alid2Vw2000-1.NormExpression a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
     oa:selector [oa:start 36; oa:end 50]
   ];
   oa:body lg:NormExpression
 .
-annotatie:Artikel45alid2Vw2000.Condition a oa:Annotation;
+annotatie:Artikel45alid2Vw2000-2.Condition a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
     oa:selector [oa:start 57; oa:end 126]
   ];
   oa:body lg:Condition
 .
-annotatie:Artikel45alid2Vw2000.LegalEffect a oa:Annotation;
+annotatie:Artikel45alid2Vw2000-2.LegalEffect a oa:Annotation;
   oa:target [
     oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
-    oa:selector [oa:start 129; oa:end 201]
+    oa:selector [oa:start 129; oa:end 162]
   ];
-  oa:body lg:LegalEffect
+  oa:body lg:Object
+.
+annotatie:Artikel45alid2Vw2000-2.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 164; oa:end 175]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel45alid2Vw2000-2.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=45a&lid=2&z=2026-10-16&g=2026-10-16>;
+    oa:selector [oa:start 178; oa:end 201]
+  ];
+  oa:body lg:Condition
 .
 
 #
