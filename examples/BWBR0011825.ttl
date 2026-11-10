@@ -1,10 +1,13 @@
 PREFIX cnt:    <http://www.w3.org/2011/content#>
 PREFIX dct:    <http://purl.org/dc/terms/>
 PREFIX eli:    <http://data.europa.eu/eli/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
+PREFIX sh:     <http://www.w3.org/ns/shacl#>
 PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.99a&o=b&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
@@ -439,7 +442,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=3&paragraaf=1&artikel=1.9&lid=3&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014L0066>;
+        eli:cites        <https://data.europe.eu/eli/dir/2014/66/oj>;
         eli:number       "3";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=3&paragraaf=1&artikel=1.9&lid=3>;
         schema:position  "3";
@@ -1313,6 +1316,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         dct:title        "Artikel 3.119.";
         schema:position  "25" .
 
+<jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2&lid=3&slotformulering&z=2026-09-25&g=2026-09-25>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2&lid=3&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "De gegevens, bedoeld onder g, worden ook vastgelegd indien een visumverklaring is afgegeven of het verblijfsdocument als afzonderlijk document is verstrekt." .
+
 <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=1&paragraaf=2&artikel=4.5&lid=1&o=a>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Onderdeel>;
@@ -2159,7 +2168,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_7&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32021L1883>;
+        eli:cites        <https://data.europe.eu/eli/dir/2021/1883/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_7>;
         schema:position  "7";
@@ -2966,6 +2975,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Onderdeel>;
         dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=2&artikel=4.29&lid=3> .
 
+<jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=2&artikel=4.44a&lid=3&slotformulering&z=2026-09-25&g=2026-09-25>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=2&artikel=4.44a&lid=3&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "en kan ten aanzien van de referent worden voorzien in een verplichting tot jaarlijkse bevestiging of correctie van de gegevens die bij Onze Minister blijkens diens opgaaf bekend zijn." .
+
 <jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2a&lid=3&o=a&o=6>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Onderdeel>;
@@ -3139,7 +3154,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=3&artikel=3.103aa&lid=4&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014L0066>;
+        eli:cites        <https://data.europe.eu/eli/dir/2014/66/oj>;
         eli:number       "4";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=3&artikel=3.103aa&lid=4>;
         schema:position  "4";
@@ -4688,7 +4703,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_12&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32011L0051> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32003L0109>;
+        eli:cites        <https://data.europe.eu/eli/dir/2011/51/oj> , <https://data.europe.eu/eli/dir/2003/109/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_12>;
         schema:position  "12";
@@ -5855,7 +5870,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "3";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2&lid=3>;
         schema:position  "3";
-        cnt:chars        "Onder de relevante gegevens wordt in ieder geval verstaan:De gegevens, bedoeld onder g, worden ook vastgelegd indien een visumverklaring is afgegeven of het verblijfsdocument als afzonderlijk document is verstrekt." .
+        cnt:chars        "Onder de relevante gegevens wordt in ieder geval verstaan:" .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=2&paragraaf=2&artikel=8.15&lid=2&o=b>
         rdf:type              eli:WorkSubdivision;
@@ -6296,7 +6311,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.106&lid=1&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0011823&artikel=32> , <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
+        eli:cites        <jci1.3:c:BWBR0011823&artikel=32> , <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.106&lid=1>;
         schema:position  "1";
@@ -6481,7 +6496,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_15&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32009L0050> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32021L1883>;
+        eli:cites        <https://data.europe.eu/eli/dir/2009/50/oj> , <https://data.europe.eu/eli/dir/2021/1883/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_15>;
         schema:position  "15";
@@ -7234,7 +7249,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.77&lid=1&o=b&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "b.";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.77&lid=1&o=b>;
         schema:position  "2";
@@ -7567,6 +7581,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=4&artikel=3.86> .
+
+<jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=1&artikel=8.2a&lid=3&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=1&artikel=8.2a&lid=3> .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=2&artikel=4.34&lid=1&o=c>
         rdf:type              eli:WorkSubdivision;
@@ -8188,17 +8207,17 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         schema:position  "1";
         cnt:chars        "de volgende gegevens uit het document voor grensoverschrijding van de passagiers:" .
 
-<jci1.3:c:BWBR0011825&hoofdstuk=6&afdeling=1&artikel=6.1f>
-        rdf:type              eli:WorkSubdivision;
-        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Artikel>;
-        dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=6&afdeling=1> .
-
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=3&paragraaf=2&artikel=3.96a&lid=6&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
         eli:number       "6";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=3&paragraaf=2&artikel=3.96a&lid=6>;
         schema:position  "6";
         cnt:chars        "Bij ministeriële regeling kunnen regels worden gesteld omtrent de toepassing van het tweede lid, onder e, het derde lid en het vijfde lid." .
+
+<jci1.3:c:BWBR0011825&hoofdstuk=6&afdeling=1&artikel=6.1f>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Artikel>;
+        dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=6&afdeling=1> .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=1&artikel=3.1a&lid=1&o=a&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
@@ -8705,7 +8724,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101b&lid=1&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=1&sub-paragraaf=3&artikel=3.6a&z=2026-09-25&g=2026-09-25>;
+        eli:cites        <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=1&sub-paragraaf=3&artikel=3.6a&z=2026-09-25&g=2026-09-25>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101b&lid=1>;
         schema:position  "1";
@@ -8937,7 +8956,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "3";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=1&artikel=8.2a&lid=3>;
         schema:position  "3";
-        cnt:chars        "Bij ministeriële regeling worden regels gesteld omtrent:De regels, bedoeld onder a en b, worden gesteld in overeenstemming met Onze Minister die het mede aangaat, tenzij uit de aard van de gegevens volgt dat daaraan geen behoefte bestaat." .
+        cnt:chars        "Bij ministeriële regeling worden regels gesteld omtrent:" .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1a&paragraaf=2&artikel=1.28&o=c>
         rdf:type              eli:WorkSubdivision;
@@ -9576,7 +9595,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.105&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.75&z=2026-09-25&g=2026-09-25> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.74&z=2026-09-25&g=2026-09-25> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.73&z=2026-09-25&g=2026-09-25> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
+        eli:cites        <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.75&z=2026-09-25&g=2026-09-25> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.74&z=2026-09-25&g=2026-09-25> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.73&z=2026-09-25&g=2026-09-25>;
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.105>;
         dct:title        "Artikel 3.105.";
         schema:position  "1";
@@ -9878,7 +9897,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.107&lid=1&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend> , <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29>;
+        eli:cites        <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.107&lid=1>;
         schema:position  "1";
@@ -10082,7 +10101,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101a&lid=1&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101a&lid=1>;
         schema:position  "1";
@@ -12039,6 +12057,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         schema:position  "4";
         cnt:chars        "De normbedragen, bedoeld in de voorgaande leden, worden door Onze Minister bekendgemaakt." .
 
+<jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2&lid=3&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=2&afdeling=1&artikel=2.2&lid=3> .
+
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=3>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Paragraaf>;
@@ -12339,7 +12362,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_16&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32006R1986> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32018R1862> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32006R1987> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32018R1861>;
+        eli:cites        <https://data.europe.eu/eli/reg/2006/1986/oj> , <https://data.europe.eu/eli/reg/2018/1862/oj> , <https://data.europe.eu/eli/reg/2006/1987/oj> , <https://data.europe.eu/eli/reg/2018/1861/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_16>;
         schema:position  "16";
@@ -13314,9 +13337,10 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         schema:position  "3" .
 
 <jci1.3:c:BWBR0011825&z=2026-09-25&g=2026-09-25>
-        rdf:type      eli:Expression;
-        eli:realizes  <jci1.3:c:BWBR0011825>;
-        dct:title     "Vreemdelingenbesluit 2000" .
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0011825>;
+        eli:title_short  "Vb 2000";
+        dct:title        "Vreemdelingenbesluit 2000" .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=2&paragraaf=2&artikel=8.11&lid=1>
         rdf:type              eli:WorkSubdivision;
@@ -14507,7 +14531,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "3";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=2&artikel=4.44a&lid=3>;
         schema:position  "3";
-        cnt:chars        "Bij ministeriële regeling worden regels gesteld omtrent de door de referent te verstrekken gegevens betreffende:en kan ten aanzien van de referent worden voorzien in een verplichting tot jaarlijkse bevestiging of correctie van de gegevens die bij Onze Minister blijkens diens opgaaf bekend zijn." .
+        cnt:chars        "Bij ministeriële regeling worden regels gesteld omtrent de door de referent te verstrekken gegevens betreffende:" .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=2&paragraaf=2&artikel=8.8&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
@@ -14848,7 +14872,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=3&artikel=3.103a&lid=5&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014L0066>;
+        eli:cites        <https://data.europe.eu/eli/dir/2014/66/oj>;
         eli:number       "5";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=3&artikel=3.103a&lid=5>;
         schema:position  "5";
@@ -15320,7 +15344,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_13&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014L0066>;
+        eli:cites        <https://data.europe.eu/eli/dir/2014/66/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=1&artikel=1.1&o=_13>;
         schema:position  "13";
@@ -15493,6 +15517,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/unknown/afdeling>;
         dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=8> .
 
+<jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=2&artikel=4.44a&lid=3&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=2&artikel=4.44a&lid=3> .
+
 <jci1.3:c:BWBR0011825&hoofdstuk=6&afdeling=4&artikel=6.6&lid=3&o=b&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
         eli:number       "b.";
@@ -15567,7 +15596,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.107&lid=2&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29> , <jci1.3:c:BWBR0011823&artikel=28> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
+        eli:cites        <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29> , <jci1.3:c:BWBR0011823&artikel=28>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.107&lid=2>;
         schema:position  "2";
@@ -15661,7 +15690,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=6a&artikel=4.51a&lid=1&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=3&paragraaf=6a&artikel=4.51a&lid=1>;
         schema:position  "1";
@@ -15883,7 +15911,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101a&lid=2&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend> , <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=1&sub-paragraaf=3&artikel=3.6&z=2026-09-25&g=2026-09-25>;
+        eli:cites        <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=1&sub-paragraaf=3&artikel=3.6&z=2026-09-25&g=2026-09-25>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=4&paragraaf=2&artikel=3.101a&lid=2>;
         schema:position  "2";
@@ -16785,7 +16813,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=4&artikel=3.86&lid=11&o=b&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "b.";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=4&artikel=3.86&lid=11&o=b>;
         schema:position  "2";
@@ -17059,7 +17086,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.106&lid=2&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0011823&artikel=32> , <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
+        eli:cites        <jci1.3:c:BWBR0011823&artikel=32> , <jci1.3:c:BWBR0011823&artikel=29a> , <jci1.3:c:BWBR0011823&artikel=29>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=5&paragraaf=1&artikel=3.106&lid=2>;
         schema:position  "2";
@@ -17960,7 +17987,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.71&lid=2&o=s&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014L0066>;
+        eli:cites        <https://data.europe.eu/eli/dir/2014/66/oj>;
         eli:number       "s.";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=3&afdeling=2&paragraaf=3&artikel=3.71&lid=2&o=s>;
         schema:position  "19";
@@ -18282,6 +18309,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=5&paragraaf=2&artikel=5.6&lid=2&o=e>;
         schema:position  "5";
         cnt:chars        "zich zonder noodzaak heeft ontdaan van zijn reis- of identiteitsdocumenten;" .
+
+<jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=1&artikel=8.2a&lid=3&slotformulering&z=2026-09-25&g=2026-09-25>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=8&afdeling=1&artikel=8.2a&lid=3&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "De regels, bedoeld onder a en b, worden gesteld in overeenstemming met Onze Minister die het mede aangaat, tenzij uit de aard van de gegevens volgt dat daaraan geen behoefte bestaat." .
 
 <jci1.3:c:BWBR0011825&hoofdstuk=4&afdeling=2&artikel=4.24&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
@@ -18610,7 +18643,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1a&paragraaf=2&artikel=1.27&lid=2&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1a&paragraaf=2&artikel=1.27&lid=2>;
         schema:position  "2";
@@ -19499,7 +19531,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=3&paragraaf=2&artikel=1.19&lid=1&o=a&z=2026-09-25&g=2026-09-25>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0001854&titeldeel=XXXA> , <jci1.3:c:BWBR0001854&titeldeel=XI> , <jci1.3:c:BWBR0001854&titeldeel=XIV> , <jci1.3:c:BWBR0001854&titeldeel=XXX> , <jci1.3:c:BWBR0001854&titeldeel=XXVI> , <jci1.3:c:BWBR0001854&titeldeel=XIII> , <jci1.3:c:BWBR0001854&boek=Tweede> , <jci1.3:c:BWBR0008804> , <jci1.3:c:BWBR0002320&artikel=69> , <jci1.3:c:BWBR0001854&titeldeel=XVIII> , <jci1.3:c:BWBR0001854&titeldeel=XXVIII> , <jci1.3:c:BWBR0001854&titeldeel=XXV> , <jci1.3:c:BWBR0002320&artikel=68> , <jci1.3:c:BWBR0001854&titeldeel=X> , <jci1.3:c:BWBR0001854&titeldeel=XXIV> , <jci1.3:c:BWBR0001854&titeldeel=XXIII> , <jci1.3:c:BWBR0001941> , <jci1.3:c:BWBR0001854&titeldeel=XII>;
+        eli:cites        <jci1.3:c:BWBR0001854&titeldeel=XXV> , <jci1.3:c:BWBR0001854&titeldeel=XXVIII> , <jci1.3:c:BWBR0001854&titeldeel=XVIII> , <jci1.3:c:BWBR0002320&artikel=69> , <jci1.3:c:BWBR0008804> , <jci1.3:c:BWBR0001854&boek=Tweede> , <jci1.3:c:BWBR0001854&titeldeel=XII> , <jci1.3:c:BWBR0001941> , <jci1.3:c:BWBR0001854&titeldeel=XXIII> , <jci1.3:c:BWBR0001854&titeldeel=XXIV> , <jci1.3:c:BWBR0001854&titeldeel=X> , <jci1.3:c:BWBR0002320&artikel=68> , <jci1.3:c:BWBR0001854&titeldeel=XXXA> , <jci1.3:c:BWBR0001854&titeldeel=XI> , <jci1.3:c:BWBR0001854&titeldeel=XIV> , <jci1.3:c:BWBR0001854&titeldeel=XXX> , <jci1.3:c:BWBR0001854&titeldeel=XXVI> , <jci1.3:c:BWBR0001854&titeldeel=XIII>;
         eli:number       "a.";
         eli:realizes     <jci1.3:c:BWBR0011825&hoofdstuk=1&afdeling=3&paragraaf=2&artikel=1.19&lid=1&o=a>;
         schema:position  "1";

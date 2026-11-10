@@ -1,0 +1,8 @@
+PREFIX eli:    <http://data.europa.eu/eli/ontology#>
+
+<jci1.3:c:BWBR0004581> eli:title_short "WAHV".
+<jci1.3:c:BWBR0004825> eli:title_short "RVV".
+<jci1.3:c:BWBR0006622> eli:title_short "WVW".
+<jci1.3:c:BWBR0011823> eli:title_short "Vw 2000".
+<jci1.3:c:BWBR0011825> eli:title_short "Vb 2000".
+<jci1.3:c:BWBR0015703> eli:title_short "Pw".

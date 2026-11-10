@@ -1,10 +1,13 @@
 PREFIX cnt:    <http://www.w3.org/2011/content#>
 PREFIX dct:    <http://purl.org/dc/terms/>
 PREFIX eli:    <http://data.europa.eu/eli/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
+PREFIX sh:     <http://www.w3.org/ns/shacl#>
 PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=3&paragraaf=2&artikel=2g&o=a>
         rdf:type              eli:WorkSubdivision;
@@ -1541,7 +1544,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_27&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024L1346>;
+        eli:cites        <https://data.europe.eu/eli/dir/2024/1346/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_27>;
         schema:position  "27";
@@ -1748,7 +1751,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_38&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33760R2018>;
+        eli:cites        <https://data.europe.eu/eli/reg/3760/2018/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_38>;
         schema:position  "38";
@@ -2425,7 +2428,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_21&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32011L0095> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32003L0109> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1347>;
+        eli:cites        <https://data.europe.eu/eli/dir/2011/95/oj> , <https://data.europe.eu/eli/dir/2003/109/oj> , <https://data.europe.eu/eli/reg/2024/1347/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_21>;
         schema:position  "21";
@@ -2557,7 +2560,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_6&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32013R0604> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32021R1060> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32021R1147> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1351>;
+        eli:cites        <https://data.europe.eu/eli/reg/2013/604/oj> , <https://data.europe.eu/eli/reg/2021/1060/oj> , <https://data.europe.eu/eli/reg/2021/1147/oj> , <https://data.europe.eu/eli/reg/2024/1351/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_6>;
         schema:position  "6";
@@ -2597,7 +2600,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=3&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32009R0810>;
+        eli:cites        <https://data.europe.eu/eli/reg/2009/810/oj>;
         eli:number       "3°";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=3>;
         schema:position  "3";
@@ -5803,7 +5806,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=1&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32013R0603> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1351> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32001L0055> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1350> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1358> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32018R1240> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32019R0818>;
+        eli:cites        <https://data.europe.eu/eli/reg/2024/1351/oj> , <https://data.europe.eu/eli/reg/2024/1358/oj> , <https://data.europe.eu/eli/reg/2019/818/oj> , <https://data.europe.eu/eli/reg/2013/603/oj> , <https://data.europe.eu/eli/reg/2024/1350/oj> , <https://data.europe.eu/eli/dir/2001/55/oj> , <https://data.europe.eu/eli/reg/2018/1240/oj>;
         eli:number       "1°";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=1>;
         schema:position  "1";
@@ -5849,7 +5852,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_17&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32021R1147> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1350>;
+        eli:cites        <https://data.europe.eu/eli/reg/2021/1147/oj> , <https://data.europe.eu/eli/reg/2024/1350/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_17>;
         schema:position  "17";
@@ -6709,7 +6712,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_11&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33140R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33524R2016> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32299R2016> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32226R2017> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32014R0515> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32011R1077>;
+        eli:cites        <https://data.europe.eu/eli/reg/2014/515/oj> , <https://data.europe.eu/eli/reg/3140/2018/oj> , <https://data.europe.eu/eli/reg/2299/2016/oj> , <https://data.europe.eu/eli/reg/2011/1077/oj> , <https://data.europe.eu/eli/reg/2226/2017/oj> , <https://data.europe.eu/eli/reg/3524/2016/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_11>;
         schema:position  "11";
@@ -6949,7 +6952,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_22&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32003L0109> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32011L0051>;
+        eli:cites        <https://data.europe.eu/eli/dir/2003/109/oj> , <https://data.europe.eu/eli/dir/2011/51/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_22>;
         schema:position  "22";
@@ -7501,7 +7504,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_44&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33626R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32412R2004> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33761R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32299R2016> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32717R2019> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32533R2008> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32226R2017> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33140R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32008R0767>;
+        eli:cites        <https://data.europe.eu/eli/reg/2533/2008/oj> , <https://data.europe.eu/eli/reg/2412/2004/oj> , <https://data.europe.eu/eli/reg/2717/2019/oj> , <https://data.europe.eu/eli/reg/3140/2018/oj> , <https://data.europe.eu/eli/reg/2299/2016/oj> , <https://data.europe.eu/eli/reg/3626/2018/oj> , <https://data.europe.eu/eli/reg/3761/2018/oj> , <https://data.europe.eu/eli/reg/2008/767/oj> , <https://data.europe.eu/eli/reg/2226/2017/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_44>;
         schema:position  "44";
@@ -8005,7 +8008,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=8&paragraaf=2&artikel=108&lid=1&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0011823&hoofdstuk=6&afdeling=2&artikel=65&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=5&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=57&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=58&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=3&artikel=55&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=3&paragraaf=3&artikel=24a&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=56&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=3&paragraaf=1&artikel=2a&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=3&artikel=54&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=6&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=1&artikel=46&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=3&artikel=2t&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=6a&z=2026-10-16&g=2026-10-16>;
+        eli:cites        <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=1&artikel=46&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=6&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=6a&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=1a&afdeling=2&paragraaf=3&artikel=2t&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=6&afdeling=2&artikel=65&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=2&artikel=5&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=57&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=58&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=3&artikel=55&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=3&paragraaf=3&artikel=24a&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=5&artikel=56&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=3&paragraaf=1&artikel=2a&z=2026-10-16&g=2026-10-16> , <jci1.3:c:BWBR0011823&hoofdstuk=4&afdeling=1&paragraaf=3&artikel=54&z=2026-10-16&g=2026-10-16>;
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=8&paragraaf=2&artikel=108&lid=1>;
         schema:position  "1";
@@ -8624,7 +8627,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_36&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1356> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32008R0767> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32017R2226> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32018R1240> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32019R0817>;
+        eli:cites        <https://data.europe.eu/eli/reg/2018/1240/oj> , <https://data.europe.eu/eli/reg/2024/1356/oj> , <https://data.europe.eu/eli/reg/2017/2226/oj> , <https://data.europe.eu/eli/reg/2008/767/oj> , <https://data.europe.eu/eli/reg/2019/817/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_36>;
         schema:position  "36";
@@ -8790,7 +8793,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_15&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32003L0086>;
+        eli:cites        <https://data.europe.eu/eli/dir/2003/86/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_15>;
         schema:position  "15";
@@ -9642,7 +9645,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_30&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32013L0032> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1348>;
+        eli:cites        <https://data.europe.eu/eli/dir/2013/32/oj> , <https://data.europe.eu/eli/reg/2024/1348/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_30>;
         schema:position  "30";
@@ -10768,9 +10771,10 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         dct:isPartOf          <jci1.3:c:BWBR0011823&hoofdstuk=6&afdeling=4&artikel=68> .
 
 <jci1.3:c:BWBR0011823&z=2026-10-16&g=2026-10-16>
-        rdf:type      eli:Expression;
-        eli:realizes  <jci1.3:c:BWBR0011823>;
-        dct:title     "Vreemdelingenwet 2000" .
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0011823>;
+        eli:title_short  "Vw 2000";
+        dct:title        "Vreemdelingenwet 2000" .
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=3&paragraaf=2&artikel=2d&lid=2>
         rdf:type              eli:WorkSubdivision;
@@ -11505,7 +11509,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=5&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32011R1077> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32008R0767> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32226R2017>;
+        eli:cites        <https://data.europe.eu/eli/reg/2011/1077/oj> , <https://data.europe.eu/eli/reg/2008/767/oj> , <https://data.europe.eu/eli/reg/2226/2017/oj>;
         eli:number       "5°";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=5>;
         schema:position  "5";
@@ -12477,7 +12481,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=9&lid=5&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31964L0221> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31973L0148> , <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=8&z=2026-10-16&g=2026-10-16> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31975L0034> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32004L0038> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31990L0364> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31975L0035> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31972L0194> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31990L0365> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31993L0096> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31968R1612> , <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&z=2026-10-16&g=2026-10-16> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/31968L0360>;
+        eli:cites        <https://data.europe.eu/eli/dir/1968/360/oj> , <https://data.europe.eu/eli/dir/1990/364/oj> , <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=8&z=2026-10-16&g=2026-10-16> , <https://data.europe.eu/eli/reg/1968/1612/oj> , <https://data.europe.eu/eli/dir/1972/194/oj> , <https://data.europe.eu/eli/dir/1973/148/oj> , <https://data.europe.eu/eli/dir/1964/221/oj> , <https://data.europe.eu/eli/dir/1975/35/oj> , <https://data.europe.eu/eli/dir/1975/34/oj> , <https://data.europe.eu/eli/dir/1990/365/oj> , <https://data.europe.eu/eli/dir/2004/38/oj> , <https://data.europe.eu/eli/dir/1993/96/oj> , <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&z=2026-10-16&g=2026-10-16>;
         eli:number       "5";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=9&lid=5>;
         schema:position  "5";
@@ -13052,7 +13056,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_37&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32006R1987> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33761R2018>;
+        eli:cites        <https://data.europe.eu/eli/reg/2006/1987/oj> , <https://data.europe.eu/eli/reg/3761/2018/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_37>;
         schema:position  "37";
@@ -13567,7 +13571,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1c&artikel=2ff&lid=2&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32024R1358>;
+        eli:cites        <https://data.europe.eu/eli/reg/2024/1358/oj>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1c&artikel=2ff&lid=2>;
         schema:position  "2";
@@ -14003,7 +14007,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=2&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32008R0767>;
+        eli:cites        <https://data.europe.eu/eli/reg/2008/767/oj>;
         eli:number       "2°";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=2>;
         schema:position  "2";
@@ -14395,7 +14399,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=8&o=e&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/onbekend>;
         eli:number       "e.";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=3&afdeling=1&artikel=8&o=e>;
         schema:position  "5";
@@ -15554,7 +15557,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_45&z=2026-10-16&g=2026-10-16>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32716R2019> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33762R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/33626R2018> , <file:///Users/marcobrattinga/GITREPO/normgrammatica/examples/32718R2019>;
+        eli:cites        <https://data.europe.eu/eli/reg/2716/2019/oj> , <https://data.europe.eu/eli/reg/3762/2018/oj> , <https://data.europe.eu/eli/reg/3626/2018/oj> , <https://data.europe.eu/eli/reg/2718/2019/oj>;
         eli:number       "";
         eli:realizes     <jci1.3:c:BWBR0011823&hoofdstuk=1&afdeling=1&artikel=1&o=_45>;
         schema:position  "45";

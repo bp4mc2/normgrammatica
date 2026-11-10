@@ -73,7 +73,32 @@
 
 <xsl:template match="extref" mode="refs">
   <!-- Extref refers to a work -->
-  <eli:cites rdf:resource="{@doc}"/>
+  <xsl:choose>
+    <xsl:when test="@doc='onbekend'"/>
+    <xsl:when test="@reeks='Celex'">
+      <xsl:choose>
+        <xsl:when test="matches(@doc,'^3\d{4}[RLD]\d{4,5}$')">
+          <xsl:variable name="type"><xsl:value-of select="substring(@doc,6,1)"/></xsl:variable>
+          <xsl:variable name="eli">
+            <xsl:text>https://data.europe.eu/eli/</xsl:text>
+            <xsl:if test="$type='R'">reg/</xsl:if>
+            <xsl:if test="$type='L'">dir/</xsl:if>
+            <xsl:if test="$type='D'">dec/</xsl:if>
+            <xsl:value-of select="substring(@doc,2,4)"/><xsl:text>/</xsl:text>
+            <xsl:value-of select="replace(substring(@doc,7), '^0+', '')"/><xsl:text>/oj</xsl:text>
+        </xsl:variable>
+          <eli:cites rdf:resource="{$eli}"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <!--Hack-->
+          <eli:cites rdf:resource="celex:{@doc}"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:when>
+    <xsl:otherwise>
+      <eli:cites rdf:resource="{@doc}"/>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="*" mode="refs">
@@ -122,10 +147,24 @@
       <!-- lid and li should have a number. If it is ommit, it should still be known as a lid or li for styling -->
       <eli:number><xsl:value-of select="li.nr|lidnr"/></eli:number>
     </xsl:if>
-    <xsl:variable name="plaintext"><xsl:apply-templates select="al" mode="text"/></xsl:variable>
+    <!-- Eigenlijk is onderstaande niet goed bij een aanhef, die zou in een afzonderlijke WorkSubdivision moeten, zie ook slotformulering hieronder -->
+    <xsl:variable name="plaintext"><xsl:apply-templates select="al[not(preceding-sibling::lijst)]" mode="text"/></xsl:variable>
     <xsl:if test="$plaintext!=''"><cnt:chars><xsl:value-of select="$plaintext"/></cnt:chars></xsl:if>
     <xsl:apply-templates select="al" mode="refs"/>
   </eli:Expression>
+  <xsl:variable name="plaintext-end"><xsl:apply-templates select="al[preceding-sibling::lijst]" mode="text"/></xsl:variable>
+  <xsl:if test="$plaintext-end!=''">
+    <!-- Speciale situatie: NA een lijst komt ook nog een beetje tekst -->
+    <eli:WorkSubdivision rdf:about="{$workid}&amp;slotformulering">
+      <dct:isPartOf rdf:resource="{$workid}"/>
+      <eli:type_subdivision rdf:resource="http://bp4mc2.org/subdivisiontype/slotformulering"/>
+    </eli:WorkSubdivision>
+    <eli:Expression rdf:about="{$workid}&amp;slotformulering{$global-exprid}">
+      <eli:realizes rdf:resource="{$workid}&amp;slotformulering"/>
+      <schema:position>9</schema:position> <!--HACK -->
+      <cnt:chars><xsl:value-of select="$plaintext-end"/></cnt:chars>
+    </eli:Expression>
+  </xsl:if>
   <xsl:for-each select="afdeling|paragraaf|artikel|lid|lijst/li">
     <xsl:apply-templates select="." mode="sub">
       <xsl:with-param name="parentid" select="$workid"/>

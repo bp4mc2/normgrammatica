@@ -1,10 +1,13 @@
 PREFIX cnt:    <http://www.w3.org/2011/content#>
 PREFIX dct:    <http://purl.org/dc/terms/>
 PREFIX eli:    <http://data.europa.eu/eli/ontology#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
+PREFIX sh:     <http://www.w3.org/ns/shacl#>
 PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&lid=1>
         rdf:type              eli:WorkSubdivision;
@@ -389,7 +392,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&lid=1>;
         schema:position  "1";
-        cnt:chars        "Aan een persoon:wordt die bijstand toegekend vanaf de dag waarop dit recht is ontstaan en kan deze dag, in afwijking van artikel 44, eerste lid, liggen voor de dag waarop belanghebbende zich heeft gemeld doch niet voor 1 januari 2012." .
+        cnt:chars        "Aan een persoon:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=36b&lid=2>
         rdf:type              eli:WorkSubdivision;
@@ -745,7 +748,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78aa&lid=1>;
         schema:position  "1";
-        cnt:chars        "Op de persoon die op de dag voor inwerkingtreding van artikel IX, onderdeel B, van de Verzamelwet SZW 2016, recht heeft op algemene bijstand:gedurende zes maanden na de datum van inwerkingtreding voor zover toepassing van dit artikel tot een hoger bedrag aan algemene bijstand leidt." .
+        cnt:chars        "Op de persoon die op de dag voor inwerkingtreding van artikel IX, onderdeel B, van de Verzamelwet SZW 2016, recht heeft op algemene bijstand:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10b&lid=8>
         rdf:type              eli:WorkSubdivision;
@@ -1076,7 +1079,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=i&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/sruclient/data/31999L0093> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/32014R0910>;
+        eli:cites        <https://data.europe.eu/eli/dir/1999/93/oj> , <https://data.europe.eu/eli/reg/2014/910/oj>;
         eli:number       "i.";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=i>;
         schema:position  "9";
@@ -1095,7 +1098,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&lid=2>;
         schema:position  "2";
-        cnt:chars        "In aanvulling op het eerste lid kan het college de belanghebbende verzoeken aan te tonen dat:Teneinde hem daartoe in de gelegenheid te stellen kan het college bij die verzoeken de belanghebbende aanbieden met diens toestemming zijn woning binnen te treden." .
+        cnt:chars        "In aanvulling op het eerste lid kan het college de belanghebbende verzoeken aan te tonen dat:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44a&lid=1&o=a>
         rdf:type              eli:WorkSubdivision;
@@ -2483,7 +2486,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=2>;
         schema:position  "2";
-        cnt:chars        "De Sociale verzekeringsbank verlaagt de algemene bijstand:In afwijking van de eerste en tweede zin verlaagt de Sociale verzekeringsbank de algemene bijstand indien het redelijk vermoeden, bedoeld in artikel 18b, eerste lid, bestaat ten aanzien van de echtgenoot van de belanghebbende. Voor de toepassing van de derde zin is artikel 18b, tweede tot en met dertiende lid, van overeenkomstige toepassing." .
+        cnt:chars        "De Sociale verzekeringsbank verlaagt de algemene bijstand:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=8&artikel=83&lid=6&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -2645,6 +2648,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Onderdeel>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.3&artikel=47> .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&lid=2&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&lid=2&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "Teneinde hem daartoe in de gelegenheid te stellen kan het college bij die verzoeken de belanghebbende aanbieden met diens toestemming zijn woning binnen te treden." .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=51&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -3475,6 +3484,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&lid=3&o=a>;
         schema:position  "1";
         cnt:chars        "ter uitvoering van een verdrag dan wel van een besluit van een volkenrechtelijke organisatie, of" .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&lid=1&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&lid=1> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=40&lid=3&o=c&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -4536,6 +4550,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         schema:position  "1";
         cnt:chars        "Het college verlaagt de bijstand, overeenkomstig het negende, tiende en elfde lid, indien naar zijn oordeel een redelijk vermoeden bestaat dat belanghebbende niet of niet in voldoende mate de Nederlandse taal beheerst, noodzakelijk voor het naar vermogen verkrijgen, het aanvaarden en het behouden van algemeen geaccepteerde arbeid." .
 
+<jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18b&lid=2&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18b&lid=2&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "Indien de omstandigheden, bedoeld in de eerste zin, onderdelen a, b en c aanwezig zijn ten tijde van de aanvraag van bijstand, wordt na ontvangst van die aanvraag een toets afgenomen binnen een door het college te bepalen termijn die ten hoogste acht weken bedraagt." .
+
 <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=4>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
@@ -4582,6 +4602,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78h&lid=2>;
         schema:position  "2";
         cnt:chars        "De in het eerste lid bedoelde bijstand wordt afgestemd op de omstandigheden, mogelijkheden en middelen van de belanghebbende, rekening houdend met het niveau van de noodzakelijke kosten van het bestaan ter plaatse." .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=1&o=a&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=1&o=a&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "en, indien het college daarbij het aanbieden van een voorziening, waaronder begrepen sociale activering gericht op arbeidsinschakeling, noodzakelijk acht, bepaalt en biedt deze voorziening aan;" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.2&artikel=19a&lid=1&o=d&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -5137,9 +5163,10 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=3&lid=1> .
 
 <jci1.3:c:BWBR0015703&z=2026-07-01&g=2026-07-01>
-        rdf:type      eli:Expression;
-        eli:realizes  <jci1.3:c:BWBR0015703>;
-        dct:title     "Participatiewet" .
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703>;
+        eli:title_short  "Pw";
+        dct:title        "Participatiewet" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=15&lid=2&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -5209,6 +5236,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=52> .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&lid=2&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&lid=2> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78g&lid=3&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -5685,7 +5717,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18b&lid=2>;
         schema:position  "2";
-        cnt:chars        "Het college neemt een toets bij de belanghebbende af, indien belanghebbende:Indien de omstandigheden, bedoeld in de eerste zin, onderdelen a, b en c aanwezig zijn ten tijde van de aanvraag van bijstand, wordt na ontvangst van die aanvraag een toets afgenomen binnen een door het college te bepalen termijn die ten hoogste acht weken bedraagt." .
+        cnt:chars        "Het college neemt een toets bij de belanghebbende af, indien belanghebbende:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=13&lid=3>
         rdf:type              eli:WorkSubdivision;
@@ -6261,7 +6293,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47b&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62b&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=16&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=58&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78z&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62g&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=61&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62h&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=48&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=52&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.2&artikel=19a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62f&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.6&artikel=63&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78t&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.6&artikel=66&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=41&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.3&artikel=55&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=9&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.3&artikel=57&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62e&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=40&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=60&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=60c&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=8&artikel=81&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=15&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=54&z=2026-07-01&g=2026-07-01>;
+        eli:cites        <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.2&artikel=19a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=52&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&artikel=48&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62h&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=61&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62g&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=53a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78z&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=58&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=16&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62b&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62f&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.6&artikel=63&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78t&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.6&artikel=66&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=41&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=54&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=15&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=8&artikel=81&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=60c&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=60&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=40&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.5&artikel=62e&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.3&artikel=57&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=9&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.3&artikel=55&z=2026-07-01&g=2026-07-01>;
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47b>;
         dct:title        "Artikel 47b. Invulling toepassing artikelen voor Sociale verzekeringsbank";
         schema:position  "2";
@@ -6277,7 +6309,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "1";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&lid=1>;
         schema:position  "1";
-        cnt:chars        "De Sociale verzekeringsbank heeft tot taak het verlenen van algemene bijstand in de vorm van een aanvullende inkomensvoorziening ouderen aan:hier te lande die in zodanige omstandigheden verkeren of dreigen te geraken dat zij niet over de middelen beschikken om in de noodzakelijke kosten van het bestaan te voorzien." .
+        cnt:chars        "De Sociale verzekeringsbank heeft tot taak het verlenen van algemene bijstand in de vorm van een aanvullende inkomensvoorziening ouderen aan:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=12>
         rdf:type              eli:WorkSubdivision;
@@ -6483,6 +6515,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Paragraaf>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=7> .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=1&o=a&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=1&o=a> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=8>
         rdf:type              eli:WorkSubdivision;
@@ -6718,7 +6755,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78f&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=45&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.2&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=58&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.1&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=40&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=9&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=35&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.1&artikel=69&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.3&artikel=77&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=32&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=8&artikel=83&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=41&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34b&z=2026-07-01&g=2026-07-01>;
+        eli:cites        <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.1&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.3&artikel=77&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.1&artikel=69&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.1&artikel=35&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=9&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=40&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.1&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&artikel=58&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34b&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=41&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=8&artikel=83&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=32&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=34&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=45&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.2&artikel=44&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=4&paragraaf=4.2&z=2026-07-01&g=2026-07-01>;
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78f>;
         dct:title        "Artikel 78f. Grondslag Bbz 2004";
         schema:position  "6";
@@ -8055,6 +8092,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10a> .
 
+<jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=2&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=2&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "In afwijking van de eerste en tweede zin verlaagt de Sociale verzekeringsbank de algemene bijstand indien het redelijk vermoeden, bedoeld in artikel 18b, eerste lid, bestaat ten aanzien van de echtgenoot van de belanghebbende. Voor de toepassing van de derde zin is artikel 18b, tweede tot en met dertiende lid, van overeenkomstige toepassing." .
+
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=4>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
@@ -8117,6 +8160,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10h&lid=2&o=b>;
         schema:position  "2";
         cnt:chars        "intermediaire activiteiten;" .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18b&lid=2&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18b&lid=2> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.2&artikel=20&lid=2&o=c>
         rdf:type              eli:WorkSubdivision;
@@ -8755,6 +8803,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=9a> .
 
+<jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&lid=1&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&lid=1&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "hier te lande die in zodanige omstandigheden verkeren of dreigen te geraken dat zij niet over de middelen beschikken om in de noodzakelijke kosten van het bestaan te voorzien." .
+
 <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.6&artikel=64&lid=1&o=e&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
         eli:cites        <jci1.3:c:BWBR0004044&artikel=8>;
@@ -9105,7 +9159,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&lid=2&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/sruclient/data/32004L0038> , <jci1.3:c:BWBR0011823&artikel=8>;
+        eli:cites        <https://data.europe.eu/eli/dir/2004/38/oj> , <jci1.3:c:BWBR0011823&artikel=8>;
         eli:number       "2";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.2&artikel=11&lid=2>;
         schema:position  "2";
@@ -9855,6 +9909,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18> .
 
+<jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&lid=1&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47a&lid=1> .
+
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10d&lid=1>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
@@ -9936,6 +9995,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.2&artikel=54>;
         dct:title        "Artikel 54. Onjuiste gegevens en onvoldoende medewerking";
         schema:position  "2" .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78aa&lid=1&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78aa&lid=1> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=7b&artikel=78ee&lid=9>
         rdf:type              eli:WorkSubdivision;
@@ -11237,7 +11301,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         eli:number       "a.";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.2&artikel=7&lid=1&o=a>;
         schema:position  "1";
-        cnt:chars        "ondersteunt bij arbeidsinschakeling:en, indien het college daarbij het aanbieden van een voorziening, waaronder begrepen sociale activering gericht op arbeidsinschakeling, noodzakelijk acht, bepaalt en biedt deze voorziening aan;" .
+        cnt:chars        "ondersteunt bij arbeidsinschakeling:" .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=3&lid=6&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -11342,6 +11406,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Onderdeel>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=5> .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78aa&lid=1&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78aa&lid=1&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "gedurende zes maanden na de datum van inwerkingtreding voor zover toepassing van dit artikel tot een hoger bedrag aan algemene bijstand leidt." .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.1&artikel=43&lid=1&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
@@ -11737,6 +11807,11 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         rdf:type              eli:WorkSubdivision;
         eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/Lid>;
         dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78j> .
+
+<jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=2&slotformulering>
+        rdf:type              eli:WorkSubdivision;
+        eli:type_subdivision  <http://bp4mc2.org/subdivisiontype/slotformulering>;
+        dct:isPartOf          <jci1.3:c:BWBR0015703&hoofdstuk=5&paragraaf=5.4&artikel=47c&lid=2> .
 
 <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78s>
         rdf:type              eli:WorkSubdivision;
@@ -12310,6 +12385,12 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
         schema:position  "3";
         cnt:chars        "de som van het netto-inkomen en de ontvangen tegemoetkomingen met toepassing van de Algemene wet inkomensafhankelijke regelingen ligt lager dan bij een vergelijkbaar huishouden waarvoor het inkomen uit een uitkering enkel bestaat uit een uitkering op grond van artikel 19, vanwege hetgeen genoemd is onder b." .
 
+<jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&lid=1&slotformulering&z=2026-07-01&g=2026-07-01>
+        rdf:type         eli:Expression;
+        eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=7a&artikel=78x&lid=1&slotformulering>;
+        schema:position  "9";
+        cnt:chars        "wordt die bijstand toegekend vanaf de dag waarop dit recht is ontstaan en kan deze dag, in afwijking van artikel 44, eerste lid, liggen voor de dag waarop belanghebbende zich heeft gemeld doch niet voor 1 januari 2012." .
+
 <jci1.3:c:BWBR0015703&hoofdstuk=7&paragraaf=7.3&artikel=77&lid=2&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
         eli:number       "2";
@@ -12500,7 +12581,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10g&lid=4&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0008657&artikel=2:58> , <jci1.3:c:BWBR0008657&artikel=2:65> , <jci1.3:c:BWBR0008657&artikel=2:61> , <jci1.3:c:BWBR0008657&artikel=2:7> , <jci1.3:c:BWBR0008657&artikel=6:3> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:31> , <jci1.3:c:BWBR0008657&artikel=2:69> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:9> , <jci1.3:c:BWBR0008657&artikel=2:64> , <jci1.3:c:BWBR0008657&artikel=2:60> , <jci1.3:c:BWBR0008657&artikel=2:63> , <jci1.3:c:BWBR0008657&artikel=2:59>;
+        eli:cites        <jci1.3:c:BWBR0008657&artikel=2:64> , <jci1.3:c:BWBR0008657&artikel=2:9> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:59> , <jci1.3:c:BWBR0008657&artikel=2:63> , <jci1.3:c:BWBR0008657&artikel=2:60> , <jci1.3:c:BWBR0008657&artikel=2:58> , <jci1.3:c:BWBR0008657&artikel=2:65> , <jci1.3:c:BWBR0008657&artikel=2:61> , <jci1.3:c:BWBR0008657&artikel=2:7> , <jci1.3:c:BWBR0008657&artikel=6:3> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:31> , <jci1.3:c:BWBR0008657&artikel=2:69>;
         eli:number       "4";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10g&lid=4>;
         schema:position  "4";
@@ -13037,7 +13118,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=g&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/sruclient/data/31975L0034> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31964L0221> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31968R1612> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31968L0360> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31993L0096> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31990L0365> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/32004L0038> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31973L0148> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31990L0364> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31972L0194> , <file:///Users/marcobrattinga/GITREPO/sruclient/data/31975L0035>;
+        eli:cites        <https://data.europe.eu/eli/dir/1973/148/oj> , <https://data.europe.eu/eli/dir/1964/221/oj> , <https://data.europe.eu/eli/dir/1972/194/oj> , <https://data.europe.eu/eli/dir/1968/360/oj> , <https://data.europe.eu/eli/dir/1993/96/oj> , <https://data.europe.eu/eli/dir/2004/38/oj> , <https://data.europe.eu/eli/dir/1990/364/oj> , <https://data.europe.eu/eli/dir/1990/365/oj> , <https://data.europe.eu/eli/reg/1968/1612/oj> , <https://data.europe.eu/eli/dir/1975/34/oj> , <https://data.europe.eu/eli/dir/1975/35/oj>;
         eli:number       "g.";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=1&paragraaf=1.1&artikel=1&o=g>;
         schema:position  "7";
@@ -14156,7 +14237,6 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&lid=2&o=t&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <file:///Users/marcobrattinga/GITREPO/sruclient/data/onbekend>;
         eli:number       "t.";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=3&paragraaf=3.4&artikel=31&lid=2&o=t>;
         schema:position  "20";
@@ -14684,7 +14764,7 @@ PREFIX xs:     <http://www.w3.org/2001/XMLSchema>
 
 <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10h&lid=5&z=2026-07-01&g=2026-07-01>
         rdf:type         eli:Expression;
-        eli:cites        <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:7> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:64> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:60> , <jci1.3:c:BWBR0008657&artikel=2:59> , <jci1.3:c:BWBR0008657&artikel=2:9> , <jci1.3:c:BWBR0008657&artikel=2:63> , <jci1.3:c:BWBR0008657&artikel=2:69> , <jci1.3:c:BWBR0008657&artikel=6:3> , <jci1.3:c:BWBR0008657&artikel=2:31> , <jci1.3:c:BWBR0008657&artikel=2:58> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:65> , <jci1.3:c:BWBR0008657&artikel=2:61>;
+        eli:cites        <jci1.3:c:BWBR0008657&artikel=2:58> , <jci1.3:c:BWBR0008657&artikel=2:31> , <jci1.3:c:BWBR0008657&artikel=6:3> , <jci1.3:c:BWBR0008657&artikel=2:69> , <jci1.3:c:BWBR0008657&artikel=2:61> , <jci1.3:c:BWBR0008657&artikel=2:65> , <jci1.3:c:BWBR0015703&hoofdstuk=6&paragraaf=6.4&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18a&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:7> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=18&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:64> , <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.3&artikel=17&z=2026-07-01&g=2026-07-01> , <jci1.3:c:BWBR0008657&artikel=2:60> , <jci1.3:c:BWBR0008657&artikel=2:59> , <jci1.3:c:BWBR0008657&artikel=2:9> , <jci1.3:c:BWBR0008657&artikel=2:63>;
         eli:number       "5";
         eli:realizes     <jci1.3:c:BWBR0015703&hoofdstuk=2&paragraaf=2.1&artikel=10h&lid=5>;
         schema:position  "5";

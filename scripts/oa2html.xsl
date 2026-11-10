@@ -62,6 +62,23 @@
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="rdf:Description" mode="work-title">
+  <xsl:choose>
+    <xsl:when test="rdf:type/@rdf:resource=$eli-Work">
+      <xsl:for-each select="key('expression',@rdf:about)">
+        <xsl:text> </xsl:text>
+        <xsl:choose>
+          <xsl:when test="eli:title_short!=''"><xsl:value-of select="eli:title_short"/></xsl:when>
+          <xsl:otherwise><xsl:value-of select="dct:title"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:apply-templates select="key('item',dct:isPartOf/@rdf:resource)" mode="work-title"/>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
 <xsl:template match="rdf:Description" mode="title">
   <xsl:choose>
     <xsl:when test="exists(dct:title)"><xsl:value-of select="dct:title"/></xsl:when>
@@ -73,47 +90,62 @@
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="rdf:Description" mode="expression-title">
+  <xsl:param name="target"/>
+  <xsl:param name="index" select="0"/>
+
+  <h3>
+    <xsl:apply-templates select="." mode="title"/>
+    <xsl:apply-templates select="key('item',eli:realizes/@rdf:resource)" mode="work-title"/>
+  </h3>
+
+  <div class="legislation">
+    <xsl:apply-templates select="." mode="expression">
+      <xsl:with-param name="target" select="$target"/>
+      <xsl:with-param name="index" select="$index"/>
+    </xsl:apply-templates>
+  </div>
+
+  <xsl:for-each select="key('annotation',key('target',$target)[not(exists(oa:selector))]/@rdf:nodeID)[oa:body!='']">
+    <p><xsl:value-of select="oa:body"/></p>
+  </xsl:for-each>
+</xsl:template>
+
 <xsl:template match="rdf:Description" mode="expression">
   <xsl:param name="target"/>
   <xsl:param name="index" select="0"/>
 
-  <h3><xsl:apply-templates select="." mode="title"/></h3>
-  <div class="legislation">
-    <xsl:if test="exists(cnt:chars)">
-      <p><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
-    </xsl:if>
-    <xsl:variable name="nextindex" select="$index + string-length(cnt:chars) + 1"/>
-    <xsl:variable name="workuri" select="key('item',eli:realizes/@rdf:resource)/@rdf:about"/>
-    <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
-      <!-- Calculating offset (DOESNT WORK WITH SUBITEMS)-->
-      <xsl:variable name="position" select="schema:position"/>
-      <xsl:variable name="siblings">
-        <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)[$position > schema:position]">
-          <offset><xsl:value-of select="string-length(cnt:chars) + 1"/></offset>
-        </xsl:for-each>
-      </xsl:variable>
-      <xsl:variable name="offset" select="sum($siblings/offset)"/>
-      <!-- Until -->
-      <xsl:choose>
-        <xsl:when test="exists(eli:number)">
-          <ul>
-            <xsl:apply-templates select="." mode="listitem">
-              <xsl:with-param name="target" select="$target"/>
-              <xsl:with-param name="index" select="$nextindex + $offset"/>
-            </xsl:apply-templates>
-          </ul>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates select="." mode="expression">
+  <xsl:if test="exists(cnt:chars)">
+    <p><xsl:apply-templates select="." mode="chars"><xsl:with-param name="target" select="$target"/><xsl:with-param name="index" select="$index"/></xsl:apply-templates></p>
+  </xsl:if>
+  <xsl:variable name="nextindex" select="$index + string-length(cnt:chars) + 1"/>
+  <xsl:variable name="workuri" select="key('item',eli:realizes/@rdf:resource)/@rdf:about"/>
+  <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)"><xsl:sort select="schema:position" data-type="number"/>
+    <!-- Calculating offset (DOESNT WORK WITH SUBITEMS)-->
+    <xsl:variable name="position" select="schema:position"/>
+    <xsl:variable name="siblings">
+      <xsl:for-each select="key('expression',key('part',$workuri)/@rdf:about)[$position > schema:position]">
+        <offset><xsl:value-of select="string-length(cnt:chars) + 1"/></offset>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="offset" select="sum($siblings/offset)"/>
+    <!-- Until -->
+    <xsl:choose>
+      <xsl:when test="exists(eli:number)">
+        <ul>
+          <xsl:apply-templates select="." mode="listitem">
             <xsl:with-param name="target" select="$target"/>
             <xsl:with-param name="index" select="$nextindex + $offset"/>
           </xsl:apply-templates>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:for-each>
-  </div>
-  <xsl:for-each select="key('annotation',key('target',$target)[not(exists(oa:selector))]/@rdf:nodeID)[oa:body!='']">
-    <p><xsl:value-of select="oa:body"/></p>
+        </ul>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates select="." mode="expression">
+          <xsl:with-param name="target" select="$target"/>
+          <xsl:with-param name="index" select="$nextindex + $offset"/>
+        </xsl:apply-templates>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:for-each>
 </xsl:template>
 
@@ -211,7 +243,7 @@
         </tr>
       </table>
       <xsl:for-each select="key('item',ROOT/rdf:RDF/rdf:Description/oa:source/@rdf:resource)"><xsl:sort select="@rdf:about"/>
-        <xsl:apply-templates select="." mode="expression">
+        <xsl:apply-templates select="." mode="expression-title">
           <xsl:with-param name="target" select="@rdf:about"/>
         </xsl:apply-templates>
       </xsl:for-each>

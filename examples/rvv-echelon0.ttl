@@ -1,0 +1,381 @@
+PREFIX cnt:  <http://www.w3.org/2011/content#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX eli:  <http://data.europa.eu/eli/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+PREFIX lg: <http://bp4mc2.org/legalgrammar/>
+
+PREFIX annotatie: <http://bp4mc2.org/legalgrammar/examples/annotations/>
+
+#
+# Norm uit Artikel 11, lid 1 RVV
+#
+annotatie:Artikel11lid1RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=1&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Is 'inhalen' hier nu het object, of juist onderdeel van de normexpressie? Het is immers onderdeel van het werkwoordelijk gezegde. Als 'inhalen' hier het object is, waarom is dan 'inwilligen' juist geen object, maar onderdeel van de normexpressie?";
+.
+
+annotatie:Artikel11lid1RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 17]
+  ];
+  oa:body lg:NormExpression;
+.
+
+annotatie:Artikel11lid1RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 19; oa:end 23]
+  ];
+  oa:body lg:Condition;
+.
+
+#
+# Norm uit Artikel 11, lid 2 RVV
+#
+annotatie:Artikel11lid2RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=2&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Tweede lid. 'Bestuurder' lijkt hier het secundair subject? En 'rechts' is ook een soort conditie, maar wel een andere dan 'die links...'";
+.
+annotatie:Artikel11lid2RVV.SecondarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 12]
+  ];
+  oa:body lg:SecondarySubject;
+.
+annotatie:Artikel11lid2RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 14; oa:end 106], [oa:start 116; oa:end 121]
+  ];
+  oa:body lg:Condition;
+.
+annotatie:Artikel11lid2RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 109; oa:end 114], [oa:start 123; oa:end 131]
+  ];
+  oa:body lg:NormExpression;
+.
+
+#
+# Norm uit Artikel 11, lid 3 RVV
+#
+annotatie:Artikel11lid3RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Derde lid. Bevat eigenlijk twee normexpressies. 'elkaar' verhoudt zich puur grammaticaal als secondair subject. Draai in die zinnen de twee secundaire objecten maar eens om...";
+.
+annotatie:Artikel11lid3RVV.PrimarySubject1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 9]
+  ];
+  oa:body lg:PrimarySubject;
+.
+annotatie:Artikel11lid3RVV.SecondarySubject1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 18; oa:end 23]
+  ];
+  oa:body lg:SecondarySubject;
+.
+annotatie:Artikel11lid3RVV.Condition1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 25; oa:end 29]
+  ];
+  oa:body lg:Condition;
+.
+annotatie:Artikel11lid3RVV.NormExpression1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 11; oa:end 16], [oa:start 31; oa:end 41]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel11lid3RVV.PrimarySubject2 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 44; oa:end 46]
+  ];
+  oa:body lg:PrimarySubject;
+.
+annotatie:Artikel11lid3RVV.NormExpression2 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 48; oa:end 52], [oa:start 80; oa:end 86]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel11lid3RVV.SecondarySubject2 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 54; oa:end 71]
+  ];
+  oa:body lg:SecondarySubject;
+.
+annotatie:Artikel11lid3RVV.Condition2 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=3&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 73; oa:end 78]
+  ];
+  oa:body lg:Condition;
+.
+
+#
+# Norm uit Artikel 11, lid 4 RVV
+#
+annotatie:Artikel11lid4RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=4&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Vierde lid. De eerste 'bestuurder' en de tweede 'bestuurder' vervullen een andere functie. Maar dat is eigenlijk alleen zichtbaar door de conditie. Hoort die dan niet bij de respectievelijke bestuurder? Want hoewel 'rechts' ook onderdeel is van de conditie, vervult deze een toch net iets andere functie dan de tekst vlak daarvoor. Maar als we dat in dit lid zo doen, waarom dan niet in lid 2?";
+.
+annotatie:Artikel11lid4RVV.PrimarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=4&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 12]
+  ];
+  oa:body lg:PrimarySubject;
+.
+annotatie:Artikel11lid4RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=4&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 14; oa:end 59], [oa:start 79; oa:end 120], [oa:start 122; oa:end 127]
+  ];
+  oa:body lg:Condition;
+.
+annotatie:Artikel11lid4RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=4&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 61; oa:end 65], [oa:start 129; oa:end 135]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel11lid4RVV.SecondarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=4&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 67; oa:end 77]
+  ];
+  oa:body lg:SecondarySubject;
+.
+
+#
+# Norm uit Artikel 11, lid 5 RVV
+#
+annotatie:Artikel11lid5RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=5&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Vijfde lid. Dat het hier niet over 'trambestuurders' maar 'trams' gaat, lijkt vooral praktisch taalgebruik te zijn";
+.
+annotatie:Artikel11lid5RVV.PrimarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=5&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 12]
+  ];
+  oa:body lg:PrimarySubject;
+.
+annotatie:Artikel11lid5RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=5&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 14; oa:end 18], [oa:start 33; oa:end 39]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel11lid5RVV.SecondarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=5&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 20; oa:end 24]
+  ];
+  oa:body lg:SecondarySubject;
+.
+annotatie:Artikel11lid5RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=11&lid=5&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 26; oa:end 31]
+  ];
+  oa:body lg:Condition;
+.
+
+#
+# Norm uit Artikel 12 RVV
+#
+annotatie:Artikel12RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=12&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Waarom is in deze zin 'een voertuig' het secondair subject? Waarom niet een object?";
+.
+annotatie:Artikel12RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=12&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 15], [oa:start 77; oa:end 87]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel12RVV.SecondarySubject a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=12&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 17; oa:end 28]
+  ];
+  oa:body lg:SecondarySubject;
+.
+annotatie:Artikel12RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=2&artikel=12&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 30; oa:end 75]
+  ];
+  oa:body lg:Condition;
+.
+
+#
+# Norm uit Artikel 12 lid 2 RVV
+#
+annotatie:Artikel12lid2RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=3&artikel=13&lid=2&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Deze normbepaling maakt dat de norm uit artikel 11 minder strikt is dan uit artikel 11 oorspronkelijk bleek. Maar om 'files' nu het secundair subject te noemen, dat lijkt toch wel heel raar.";
+.
+annotatie:Artikel12lid2RVV.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=3&artikel=13&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 2; oa:end 6]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel12lid2RVV.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=3&artikel=13&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 8; oa:end 12], [oa:start 34; oa:end 49]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel12lid2RVV.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=II&paragraaf=3&artikel=13&lid=2&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 14; oa:end 32]
+  ];
+  oa:body lg:Condition
+.
+
+#
+# Norm uit Artikel 13 WVW lid 1
+#
+annotatie:Artikel13lid1WVW a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=II&paragraaf=1&artikel=13&lid=1&z=2026-09-01&g=2026-09-01>;
+  ];
+  oa:body "Dit lijkt de delegatiebepaling te zijn die maakt dat de RVV kan worden opgesteld. Vreemd genoeg staat dat niet als zodanig in de RVV. De originele considerance gaat terug naar de oude wet, bij de informatie staat bij de grondslagen niet dit artikel. 'betreffende het gedrag..' heeft de functie van conditie. Maar toch is het meer kenmerkend dan conditionerend?";
+.
+annotatie:Artikel13lid1WVW.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=II&paragraaf=1&artikel=13&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 1; oa:end 34], [oa:start 69; oa:end 113]
+  ];
+  oa:body lg:Condition
+.
+annotatie:Artikel13lid1WVW.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=II&paragraaf=1&artikel=13&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 36; oa:end 41], [oa:start 57; oa:end 67]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel13lid1WVW.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=II&paragraaf=1&artikel=13&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 43; oa:end 55]
+  ];
+  oa:body lg:Object
+.
+
+#
+# Norm uit Artikel 177 lid 2 (en dan in het bijzonder onderdeel d)
+#
+annotatie:Artikel177lid2WVW a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=XI&artikel=177&lid=2&z=2026-09-01&g=2026-09-01>;
+  ];
+  oa:body "Hier wordt de strafdreiging geformuleerd voor regels die krachtens deze wet zijn bepaald, mits expliciet als strafbaar aangewezen. Is de handeling nu het object, en 'met hechtenis...' nu een conditie ten aanzien van de manier van straffen?";
+.
+annotatie:Artikel177lid2WVW.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=XI&artikel=177&lid=2&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 1; oa:end 15], [oa:start 989; oa:end 1094]
+  ];
+  oa:body lg:Object
+.
+annotatie:Artikel177lid2WVW.NormExpression a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=XI&artikel=177&lid=2&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 1098; oa:end 1111]
+  ];
+  oa:body lg:NormExpression
+.
+annotatie:Artikel177lid2WVW.Condition a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0006622&hoofdstuk=XI&artikel=177&lid=2&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 1113; oa:end 1191]
+  ];
+  oa:body lg:Condition
+.
+
+#
+# Norm uit Artikel 92 lid 1 RVV
+#
+annotatie:Artikel92lid1RVV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=VII&artikel=92&lid=1&z=2026-07-01&g=2026-07-01>;
+  ];
+  oa:body "Dit maakt dat overtreden van artikel 11 en 12 als strafbaar wordt gesteld. Maar als sprake is van 13, dan (dus) niet (meer) van 11. Dit lijkt een bepaling waarbij een iets andere grammatica nodig is dan de normgrammatica. Het constitueert iets, namelijk deze handelingen als strafbare feiten.";
+.
+annotatie:Artikel92lid1RVV.Object a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004825&hoofdstuk=VII&artikel=92&lid=1&z=2026-07-01&g=2026-07-01>;
+    oa:selector [oa:start 1; oa:end 231]
+  ];
+  oa:body lg:Object
+.
+
+#
+# Norm uit Artikel 2 WAHV
+#
+annotatie:Artikel2lid1WAHV a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004581&hoofdstuk=II&artikel=2&lid=1&z=2026-09-01&g=2026-09-01>;
+  ];
+  oa:body "Twee bepalingen in dit lid. De 1e regelt een bevoegdheid, de 2e beschrijft een gevolg van het toepassen van die bevoegdheid. Ook hier lijkt de normgrammatica niet het meest geschikt.";
+.
+annotatie:Artikel2lid1WAHV.Condition1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004581&hoofdstuk=II&artikel=2&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 1; oa:end 275], [oa:start 285; oa:end 316]
+  ];
+  oa:body lg:Condition;
+.
+annotatie:Artikel2lid1WAHV.NormExpression1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004581&hoofdstuk=II&artikel=2&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 278; oa:end 283], [oa:start 343; oa:end 357]
+  ];
+  oa:body lg:NormExpression;
+.
+annotatie:Artikel2lid1WAHV.Object1 a oa:Annotation;
+  oa:target [
+    oa:source <jci1.3:c:BWBR0004581&hoofdstuk=II&artikel=2&lid=1&z=2026-09-01&g=2026-09-01>;
+    oa:selector [oa:start 318; oa:end 341]
+  ];
+  oa:body lg:Object;
+.
